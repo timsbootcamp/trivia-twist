@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { WriteScoresToLocalStorage } from '../../Lib/localStorage'; 
 
 const QuizResult = ({ score }) => {
   const [initials, setInitials] = useState('');
@@ -6,6 +7,7 @@ const QuizResult = ({ score }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Submitted Initials:" + initials + " " + score);
+    WriteScoresToLocalStorage(initials, score);
   };
 
   return (
