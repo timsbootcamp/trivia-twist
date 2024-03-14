@@ -1,17 +1,3 @@
-// import React from 'react';
-
-// const QuizResult = ({ score }) => {
-//   return (
-//     <div>
-//       <h2>Quiz Completed!</h2>
-//       <p>Your score: {score}</p>
-//     </div>
-//   );
-// };
-
-// export default QuizResult;
-
-
 import React, { useState } from 'react';
 
 const QuizResult = ({ score }) => {
@@ -19,9 +5,7 @@ const QuizResult = ({ score }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Handle submission of initials
-    console.log("Submitted Initials:", initials);
-    // You can perform any action here, such as sending data to a server
+    console.log("Submitted Initials:" + initials + " " + score);
   };
 
   return (
