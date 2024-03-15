@@ -7,7 +7,6 @@ function App() {
 
   const handleSelectDifficulty = (url) => {
     setSelectedUrl(url);
-    console.log("Selected URL:", url); 
   };
 
   return (
