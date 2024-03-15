@@ -1,41 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./HomePage.css";
-import TriviaSelection from '../TriviaSelection/TriviaSelection'
-import QuizApp from '../QuizApp/QuizApp';
-
+import TriviaTwistLogoWithLights from "../../assets/TriviaTwistLogoWithLights.svg";
+import TriviaSelection from "../TriviaSelection/TriviaSelection";
+import QuizApp from "../QuizApp/QuizApp";
 
 function HomePage() {
- const [isHomePageVisible, setIsHomePageVisible] = useState(true);
+  const [isHomePageVisible, setIsHomePageVisible] = useState(true);
 
- const handleStartClick = () => {
+  const handleStartClick = () => {
     setIsHomePageVisible(false);
- };
- 
- const [selectedUrl, setSelectedUrl] = useState(null);
+  };
 
- const handleSelectDifficulty = (url) => {
-   setSelectedUrl(url);
- };
+  const [selectedUrl, setSelectedUrl] = useState(null);
 
+  const handleSelectDifficulty = (url) => {
+    setSelectedUrl(url);
+  };
 
- return (
+  return (
     <div className="homePage">
       {isHomePageVisible ? (
         <>
-          Home Page
-          <button onClick={handleStartClick}>Start</button>
+          <div className="homePageContent">
+            <img src={TriviaTwistLogoWithLights} alt="Trivia Twist Logo With Lights" className="logo" />
+            Home Page
+            <button onClick={handleStartClick}>Start</button>
+          </div>
         </>
       ) : (
         <div>
-          {<div>
-      <TriviaSelection onSelectDifficulty={handleSelectDifficulty} />     
-      {selectedUrl && <QuizApp triviaUrl={selectedUrl} />}
-    </div>}
-       
+          {
+            <div>
+              <TriviaSelection onSelectDifficulty={handleSelectDifficulty} />
+              {selectedUrl && <QuizApp triviaUrl={selectedUrl} />}
+            </div>
+          }
         </div>
       )}
     </div>
- );
+  );
 }
 
 export default HomePage;

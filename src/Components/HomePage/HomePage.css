@@ -4,6 +4,23 @@ body {
     
 }
 
+.homePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* .homePageContent {
+    text-align: center;
+} */
+
+.logo {
+    width: 80%;
+    height: auto;
+    max-width: 300px;
+}
+
 .hide{
     display: hide;
 }
