@@ -11,14 +11,15 @@ body {
     height: 100vh;
 }
 
-/* .homePageContent {
+.homePageContent {
     text-align: center;
-} */
+}
 
 .logo {
     width: 80%;
     height: auto;
     max-width: 300px;
+    margin: auto;
 }
 
 .hide{
