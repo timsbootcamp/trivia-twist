@@ -1,12 +1,19 @@
+import React, { useContext } from 'react';
+import VisibilityContext from './VisibilityContext';
 
 function QuizPage() {
+ const { setCurrentPage } = useContext(VisibilityContext);
 
-    return(
-        <div>
+ const navigateToLeaderboard = () => {
+    setCurrentPage('leaderboard');
+ };
 
-            <button></button>
-        </div>
-    )
+ return (
+    <div className="quizPage">
+      Quiz Page
+      <button onClick={navigateToLeaderboard}>Finish Quiz</button>
+    </div>
+ );
 }
 
-export default QuizPage
+export default QuizPage;
