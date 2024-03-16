@@ -3,7 +3,7 @@ import { decodeHTMLEntities } from "../../Lib/formatting";
 
 const AnswerOption = ({ option, selected, onSelect }) => {
   return (
-    <li>
+    <li className='answers'>
       <label>
         <input
           type="radio"

@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -40,4 +40,18 @@
 .read-the-docs {
   color: #888;
 }
+ */
 
+.app {
+   /* Set the background image */
+   background-image: url('src/assets/Elements/Background-Image/Background-Image.png');
+   /* Set background size and other properties as needed */
+   background-size: cover;
+   background-position: center;
+   /* Set minimum height to fill the viewport */
+   min-height: 100vh;
+   /* Add more styles as needed */
+   width:100%;
+   height:100%;
+   z-index: -1;
+}
