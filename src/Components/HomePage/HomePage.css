@@ -1,27 +1,31 @@
 body {
-    background-color: #8c52ff;
-    background-image: linear-gradient(90deg, #8c52ff 0%, #5ce1e6 100%);
-    
+  background-color: #8c52ff;
+  background-image: linear-gradient(90deg, #8c52ff 0%, #5ce1e6 100%);
+  overflow: hidden;
 }
 
 .homePage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .homePageContent {
-    text-align: center;
+  text-align: center;
 }
 
 .logo {
-    width: 80%;
-    height: auto;
-    max-width: 300px;
-    margin: auto;
+  width: 80%;
+  height: auto;
+  max-width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
-.hide{
-    display: hide;
+.hide {
+  display: hide;
 }
