@@ -3,6 +3,15 @@ import { readScoresFromLocalStorage } from "../../Lib/localStorage";
 
 const Leaderboard = () => {
   let scoresPlayers = readScoresFromLocalStorage();
+  const [isHomePageVisible, setIsHomePageVisible] = useState(true);
+
+//   const handleStartClick = () => {
+//     setIsHomePageVisible(false);
+//  };
+
+ function refreshPage() {
+  window.location.reload(false);
+}
 
   return (
     <div>
@@ -14,6 +23,7 @@ const Leaderboard = () => {
           </li>
         ))}
       </ul>
+      <div><button onClick={refreshPage}>Go Home</button></div>
     </div>
   );
 };
