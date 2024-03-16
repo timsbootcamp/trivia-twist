@@ -4,6 +4,10 @@ import { readScoresFromLocalStorage } from "../../Lib/localStorage";
 const Leaderboard = () => {
   let scoresPlayers = readScoresFromLocalStorage();
 
+ function refreshPage() {
+  window.location.reload(false);
+}
+
   return (
     <div>
       <h2>Leaderboard</h2>
@@ -14,6 +18,7 @@ const Leaderboard = () => {
           </li>
         ))}
       </ul>
+      <div><button onClick={refreshPage}>Go Home</button></div>
     </div>
   );
 };
