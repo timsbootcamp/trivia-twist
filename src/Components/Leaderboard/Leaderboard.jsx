@@ -4,7 +4,7 @@ import { readScoresFromLocalStorage } from "../../Lib/localStorage";
 const Leaderboard = () => {
   let scoresPlayers = readScoresFromLocalStorage();
   
-  const topSixScores = scoresPlayers.slice(0, 6);
+  const topFiveScores = scoresPlayers.slice(0, 5);
 
  function refreshPage() {
   window.location.reload(false);
@@ -14,7 +14,7 @@ const Leaderboard = () => {
     <div>
       <h2>Leaderboard</h2>
       <ul>
-        {topSixScores.map((player, index) => (
+        {topFiveScores.map((player, index) => (
           <li key={index}>
             {player.userName} - {player.score}
           </li>
