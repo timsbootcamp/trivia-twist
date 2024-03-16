@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AnswerOption from '../AnswerOption/AnswerOption'; 
+import { decodeHTMLEntities } from "../../Lib/formatting";
 
 const Question = ({ questionData, onAnswer, onNext }) => {
   const [selectedOption, setSelectedOption] = useState('');
@@ -16,7 +17,7 @@ const Question = ({ questionData, onAnswer, onNext }) => {
 
   return (
     <div>
-      <h2>{questionData.question}</h2>
+      <h2>{decodeHTMLEntities(questionData.question)}</h2>
       <ul>
         {questionData.options.map((option, index) => (
           <AnswerOption

@@ -1,4 +1,5 @@
 import React from 'react';
+import { decodeHTMLEntities } from "../../Lib/formatting";
 
 const AnswerOption = ({ option, selected, onSelect }) => {
   return (
@@ -7,11 +8,11 @@ const AnswerOption = ({ option, selected, onSelect }) => {
         <input
           type="radio"
           name="options"
-          value={option}
+          value={decodeHTMLEntities(option)}
           checked={selected}
           onChange={() => onSelect(option)}
         />
-        {option}
+        {decodeHTMLEntities(option)}
       </label>
     </li>
   );
