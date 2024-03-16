@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SelectionCards from '../SelectionCards/SelectionCards';
 
 const generateTriviaUrl = (category, difficulty) => {
   return `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}&type=multiple`;
@@ -48,6 +49,7 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
       {!selectedCategory && (
         <div>
           <h2>Select Trivia Category:</h2>
+          <SelectionCards></SelectionCards>
           <select value={selectedCategory} onChange={handleSelectCategory}>
             <option value="">Select Category</option>
             {Object.keys(triviaCategories).map((category) => (
