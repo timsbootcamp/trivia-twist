@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import TriviaSelection from '../TriviaSelection/TriviaSelection';
 import './SelectionCards.css'
 
-function SelectionCards() {
+const SelectionCards = () => {
 
     return  (
-        <></>
+        <>
+        </>
     )
 
 }

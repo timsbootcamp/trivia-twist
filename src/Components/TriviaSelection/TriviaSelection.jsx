@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SelectionCards from '../SelectionCards/SelectionCards';
 
 const generateTriviaUrl = (category, difficulty) => {
   return `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}&type=multiple`;
