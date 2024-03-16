@@ -3,11 +3,6 @@ import { readScoresFromLocalStorage } from "../../Lib/localStorage";
 
 const Leaderboard = () => {
   let scoresPlayers = readScoresFromLocalStorage();
-  const [isHomePageVisible, setIsHomePageVisible] = useState(true);
-
-//   const handleStartClick = () => {
-//     setIsHomePageVisible(false);
-//  };
 
  function refreshPage() {
   window.location.reload(false);
