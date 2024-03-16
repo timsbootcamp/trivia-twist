@@ -49,6 +49,7 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
       {!selectedCategory && (
         <div>
           <h2>Select Trivia Category:</h2>
+          <SelectionCards></SelectionCards>
           <select value={selectedCategory} onChange={handleSelectCategory}>
             <option value="">Select Category</option>
             {Object.keys(triviaCategories).map((category) => (
