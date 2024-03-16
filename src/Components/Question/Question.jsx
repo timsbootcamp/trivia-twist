@@ -60,13 +60,18 @@ const Question = ({ questionData, onAnswer, onNext }) => {
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
+    onAnswer(option); // Pass the selected option back to QuizApp
+    onNext(); // Move to the next question
   };
+  
 
   const handleSubmit = () => {
     onAnswer(selectedOption);
     setSelectedOption('');
     onNext();
   };
+
+
 
   return (
     <>
@@ -78,13 +83,12 @@ const Question = ({ questionData, onAnswer, onNext }) => {
 
       <div>
         {questionData.options.map((option, index) => (
-          <div key={index}>
-            <div style={{ display: 'block', border: '1px solid black', backgroundColor:'#07B4AA', padding: '10px', marginBottom: '10px' }} onClick={() => handleOptionSelect(option)}>
-              {decodeHTMLEntities(option)}
-            </div>
+          <div key={index} onClick={() => handleOptionSelect(option)} style={{ display: 'block', border: '1px solid black', padding: '10px', marginBottom: '10px', backgroundColor: '#FFF', cursor: 'pointer' }}>
+            {decodeHTMLEntities(option)}
           </div>
         ))}
       </div>
+    
       {/* <ul>
         {questionData.options.map((option, index) => (
           <AnswerOption
