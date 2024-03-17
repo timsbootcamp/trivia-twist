@@ -53,12 +53,13 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
       {!selectedCategory && (
         <div>
           <h2>Select Trivia Category:</h2>
-          <AnimalCard onSelectCategory={handleSelectCategory} />
-          <GenKnowCards onSelectCategory={handleSelectCategory} />
-          <ScienceNatureCard onSelectCategory={handleSelectCategory} />
-          <SportsCard onSelectCategory={handleSelectCategory} />
-          <MusicCard onSelectCategory={handleSelectCategory} />
-          <ComingSoonCard></ComingSoonCard>
+         
+          <div><AnimalCard onSelectCategory={handleSelectCategory} />
+          <GenKnowCards onSelectCategory={handleSelectCategory} /></div>
+          <div><ScienceNatureCard onSelectCategory={handleSelectCategory} />
+          <SportsCard onSelectCategory={handleSelectCategory} /></div>
+          <div><MusicCard onSelectCategory={handleSelectCategory} />
+          <ComingSoonCard></ComingSoonCard></div>
           
        
           <select value={selectedCategory} onChange={handleSelectCategory}>

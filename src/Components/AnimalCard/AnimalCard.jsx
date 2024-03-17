@@ -7,7 +7,7 @@ const AnimalCard = ({ onSelectCategory }) => {
   };
 
   return (
-    <button className='mt-5 mb-5' onClick={handleSelectCategory}>
+    <button className='mt-5 mb-5 col-sm-12 col-md-4' onClick={handleSelectCategory}>
    <svg className='AnimalCard'
       xmlns="http://www.w3.org/2000/svg"
       width="399"
