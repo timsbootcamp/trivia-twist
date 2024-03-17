@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-// import TriviaSelection,{SelectedDifficulty,handleSelectDifficulty} from '../../Components/TriviaSelection/TriviaSelection'
-// import onSelectDifficulty from '../../Components/TriviaSelection/TriviaSelection'
 import './index.css'; 
 
 

@@ -6,6 +6,7 @@ import MusicCard from '../EntertainmentCard/MusicCard';
 import ScienceNatureCard from '../ScienceCard/ScienceNatureCard';
 import ComingSoonCard from '../ComingSoonCard/ComingSoonCard';
 import EasyCard from '../LevelEasyCard/EasyLevel';
+import HardCard from '../LevelHardCard/HardLevel'
 import 'bulma/css/bulma.min.css';
 
 const generateTriviaUrl = (category, difficulty) => {
@@ -62,6 +63,7 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
         <div>
           <h2>Select Trivia Difficulty:</h2>
           <EasyCard SelectedDifficulty={setSelectedDifficulty} />
+          <HardCard SelectedDifficulty={setSelectedDifficulty} />
           <select value={selectedDifficulty} onChange={(e) => setSelectedDifficulty(e.target.value)}>
             <option value="">Select Difficulty</option>
             {['Easy', 'Medium', 'Hard'].map((difficulty) => (
