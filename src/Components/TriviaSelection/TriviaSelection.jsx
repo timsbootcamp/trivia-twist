@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import SelectionCards from "../SelectionCards/SelectionCards";
-// import GenKnowCards from '../GeneralKnowledgeCard/Genkno';
+import GenKnowCards from '../GeneralKnowledgeCard/Genkno';
 import SportsCard from '../SportsCard/SportsCard';
-// import MusicCard from '../EntertainmentCard/MusicCard';
+import MusicCard from '../EntertainmentCard/MusicCard';
 import ScienceNatureCard from '../ScienceCard/ScienceNatureCard';
 // import ComingSoonCard from '../SelectionCards/ComingSoonCard';
 
