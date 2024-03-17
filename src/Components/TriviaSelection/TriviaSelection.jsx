@@ -5,6 +5,7 @@ import SportsCard from '../SportsCard/SportsCard';
 import MusicCard from '../EntertainmentCard/MusicCard';
 import ScienceNatureCard from '../ScienceCard/ScienceNatureCard';
 import ComingSoonCard from '../ComingSoonCard/ComingSoonCard';
+import EasyCard from '../LevelEasyCard/EasyLevel';
 import 'bulma/css/bulma.min.css';
 
 const generateTriviaUrl = (category, difficulty) => {
@@ -23,15 +24,9 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedDifficulty, setSelectedDifficulty] = useState('');
   const [quizStarted, setQuizStarted] = useState(false);
-  const difficulties = ['Easy', 'Medium', 'Hard'];
 
   const handleSelectCategory = (category) => {
     setSelectedCategory(category);
-  };
-
-  const handleSelectDifficulty = (event) => {
-    const selectedValue = event.target.value;
-    setSelectedDifficulty(selectedValue);
   };
 
   const handleStartQuiz = () => {
@@ -60,23 +55,16 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
           <SportsCard onSelectCategory={handleSelectCategory} /></div>
           <div><MusicCard onSelectCategory={handleSelectCategory} />
           <ComingSoonCard></ComingSoonCard></div>
-          
-       
-          {/* <select value={selectedCategory} onChange={handleSelectCategory}>
-            <option value="">Select Category</option>
-            {Object.keys(triviaCategories).map((category) => (
-              <option key={category} value={category}>{category}</option>
-            ))}
-          </select> */}
         </div>
       )}
 
       {selectedCategory && !selectedDifficulty && (
         <div>
           <h2>Select Trivia Difficulty:</h2>
-          <select value={selectedDifficulty} onChange={handleSelectDifficulty}>
+          <EasyCard SelectedDifficulty={setSelectedDifficulty} />
+          <select value={selectedDifficulty} onChange={(e) => setSelectedDifficulty(e.target.value)}>
             <option value="">Select Difficulty</option>
-            {difficulties.map((difficulty) => (
+            {['Easy', 'Medium', 'Hard'].map((difficulty) => (
               <option key={difficulty} value={difficulty}>{difficulty}</option>
             ))}
           </select>
