@@ -62,12 +62,12 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
           <ComingSoonCard></ComingSoonCard></div>
           
        
-          <select value={selectedCategory} onChange={handleSelectCategory}>
+          {/* <select value={selectedCategory} onChange={handleSelectCategory}>
             <option value="">Select Category</option>
             {Object.keys(triviaCategories).map((category) => (
               <option key={category} value={category}>{category}</option>
             ))}
-          </select>
+          </select> */}
         </div>
       )}
 
