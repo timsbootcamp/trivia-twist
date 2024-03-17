@@ -57,8 +57,8 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
           <AnimalCard onSelectCategory={handleSelectCategory} />
           <GenKnowCards onSelectCategory={handleSelectCategory} />
           <ScienceNatureCard onSelectCategory={handleSelectCategory} />
-          {/* <SportsCard onSelectCategory={handleSelectCategory} />
-          <MusicCard onSelectCategory={handleSelectCategory} /> */}
+          <SportsCard onSelectCategory={handleSelectCategory} />
+          {/* <MusicCard onSelectCategory={handleSelectCategory} /> */}
 
           
           
