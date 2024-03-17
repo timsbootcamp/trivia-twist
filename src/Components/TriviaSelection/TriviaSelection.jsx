@@ -4,6 +4,7 @@ import GenKnowCards from '../GeneralKnowledgeCard/Genkno';
 import SportsCard from '../SportsCard/SportsCard';
 import MusicCard from '../EntertainmentCard/MusicCard';
 import ScienceNatureCard from '../ScienceCard/ScienceNatureCard';
+import ComingSoonCard from '../ComingSoonCard/ComingSoonCard';
 import 'bulma/css/bulma.min.css';
 
 const generateTriviaUrl = (category, difficulty) => {
@@ -57,6 +58,7 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
           <ScienceNatureCard onSelectCategory={handleSelectCategory} />
           <SportsCard onSelectCategory={handleSelectCategory} />
           <MusicCard onSelectCategory={handleSelectCategory} />
+          <ComingSoonCard></ComingSoonCard>
           
        
           <select value={selectedCategory} onChange={handleSelectCategory}>
