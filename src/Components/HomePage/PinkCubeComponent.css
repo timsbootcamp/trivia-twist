@@ -1,10 +1,10 @@
-.twoDimContainer {
+.pinkCubeContainer {
   position: absolute;
   top: 50%;
-  left: 60%;
+  left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
-  width: 10%;
-  max-width: 10vw;
+  width: 0.5%;
+  max-width: 0.5vw;
   height: auto;
 }

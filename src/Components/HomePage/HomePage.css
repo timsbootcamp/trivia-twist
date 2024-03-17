@@ -13,19 +13,37 @@ body {
 
 .homePageContent {
   text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  margin-bottom: 2rem;
 }
 
 .logo {
-  width: 80%;
+  width: 100%;
   height: auto;
-  max-width: 600px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+  max-width: 300px;
 }
 
-.hide {
-  display: hide;
+.startButton {
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  color: #8c52ff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.startButton:hover {
+  background-color: #f2f2f2;
+}
+
+/* .hide {
+  display: hide;
+} */
