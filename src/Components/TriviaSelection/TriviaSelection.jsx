@@ -55,7 +55,7 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
         <div>
           <h2>Select Trivia Category:</h2>
           <AnimalCard onSelectCategory={handleSelectCategory} />
-          <GenKnowCards></GenKnowCards>
+          <GenKnowCards onSelectCategory={handleSelectCategory} />
           <ScienceNatureCard></ScienceNatureCard>
           <SportsCard></SportsCard>
           <MusicCard></MusicCard>
