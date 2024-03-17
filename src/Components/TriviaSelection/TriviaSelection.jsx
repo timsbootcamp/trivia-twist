@@ -64,8 +64,8 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
         <div>
           <h2>Select Trivia Difficulty:</h2>
           <EasyCard SelectedDifficulty={setSelectedDifficulty} />
-          <HardCard SelectedDifficulty={setSelectedDifficulty} />
           <MediumCard SelectedDifficulty={setSelectedDifficulty} />
+          <HardCard SelectedDifficulty={setSelectedDifficulty} />
           <select value={selectedDifficulty} onChange={(e) => setSelectedDifficulty(e.target.value)}>
             <option value="">Select Difficulty</option>
             {['Easy', 'Medium', 'Hard'].map((difficulty) => (
