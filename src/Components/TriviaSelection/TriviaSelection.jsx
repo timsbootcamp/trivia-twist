@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import SelectionCards from "../SelectionCards/SelectionCards";
+// import GenKnowCards from '../GeneralKnowledgeCard/Genkno';
+import SportsCard from '../SportsCard/SportsCard';
+// import MusicCard from '../EntertainmentCard/MusicCard';
+import ScienceNatureCard from '../ScienceCard/ScienceNatureCard';
+// import ComingSoonCard from '../SelectionCards/ComingSoonCard';
+
 import 'bulma/css/bulma.min.css';
 
 const generateTriviaUrl = (category, difficulty) => {
@@ -56,8 +62,11 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
 
       {!selectedCategory && (
         <div>
+           
           <h2>Select Trivia Category:</h2>
           <SelectionCards></SelectionCards>
+          <SportsCard></SportsCard>
+          <ScienceNatureCard></ScienceNatureCard>
           <select
             className="select"
             value={selectedCategory}
@@ -70,12 +79,6 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
               </option>
             ))}
           </select>
-          {/* <select value={selectedCategory} onChange={handleSelectCategory}>
-            <option value="">Select Category</option>
-            {Object.keys(triviaCategories).map((category) => (
-              <option key={category} value={category}>{category}</option>
-            ))}
-          </select> */}
         </div>
       )}
 
@@ -94,14 +97,6 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
               </option>
             ))}
           </select>
-          {/* <select value={selectedDifficulty} onChange={handleSelectDifficulty}>
-            <option value="">Select Difficulty</option>
-            {difficulties.map((difficulty) => (
-              <option key={difficulty} value={difficulty}>
-                {difficulty}
-              </option>
-            ))}
-          </select> */}
         </div>
       )}
 
