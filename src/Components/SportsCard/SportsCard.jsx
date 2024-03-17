@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import TriviaSelection from '../TriviaSelection/TriviaSelection';
 import './index.css';
-import image from '../elements/sportscards.svg';
-import  SelectionCards from '../CardCategorySelection/selection'
+import image from '../../elements/sportscards.svg';
+
 
 // const SportsCard = (props) => {
 //     // const [Sports, category] = useState();
