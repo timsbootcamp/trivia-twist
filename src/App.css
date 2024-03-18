@@ -44,7 +44,7 @@
 
 .app {
    /* Set the background image */
-   background-image: url('./Background-Image.png');
+   background-image: url('./assets/Background-Image.png');
    /* Set background size and other properties as needed */
    background-size: cover;
    background-position: center;
