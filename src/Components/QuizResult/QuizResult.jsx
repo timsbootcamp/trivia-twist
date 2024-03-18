@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { WriteScoresToLocalStorage } from "../../Lib/localStorage";
 import Leaderboard from "../Leaderboard/Leaderboard";
+import './index.css'
 
 const QuizResult = ({ score }) => {
   const [initials, setInitials] = useState("");
@@ -20,11 +21,19 @@ const QuizResult = ({ score }) => {
           <Leaderboard />
         </div>
       ) : (
-      <div>  
-      <h2>Quiz Completed!</h2>
+      <div> 
+        <img className="background-elements" src="src\assets\Elements\Final-Score-Page\Fuchsia and Pink Trivia Night Instagram Story (Website) (8).png"></img>
+        <div class="columns">
+         <div class="column is-one-third">
+          <img src="src\assets\Elements\Final-Score-Page\left side cubes.svg"></img>
+          </div>
+
+<div class="column is-one-third">
+<img className="logo" src="src\assets\Elements\Final-Score-Page\Logo.png"></img>
+<h2>Quiz Completed!</h2>
       <p>Your score: {score}</p>
   
-    <form onSubmit={handleSubmit}>
+    <form className="initials-form" onSubmit={handleSubmit}>
           <label>
             Initials:
             <input
@@ -36,9 +45,46 @@ const QuizResult = ({ score }) => {
           <button type="submit">Submit</button>
         </form>
         </div>
+
+
+       <div class="column is-one-third">
+          <img src="src\assets\Elements\Final-Score-Page\right side cubes.svg"></img>
+       </div>
+       </div>
+       </div>
+
+      
       )}
     </div>
   );
 };
+
+//   return (
+//     <div>
+//       {submitted ? (
+//         <div>
+//           <Leaderboard />
+//         </div>
+//       ) : (
+//       <div>  
+//       <h2>Quiz Completed!</h2>
+//       <p>Your score: {score}</p>
+  
+//     <form onSubmit={handleSubmit}>
+//           <label>
+//             Initials:
+//             <input
+//               type="text"
+//               value={initials}
+//               onChange={(e) => setInitials(e.target.value)}
+//             />
+//           </label>
+//           <button type="submit">Submit</button>
+//         </form>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
 
 export default QuizResult;

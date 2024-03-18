@@ -1,0 +1,15 @@
+.logo {
+    transform: scale(0.7);
+}
+
+.background-elements {
+    z-index: 1;
+    position:absolute;
+    transform: scale(1.1);
+}
+
+.initials-form {
+    z-index: 999999;
+    position:absolute;
+    
+}
