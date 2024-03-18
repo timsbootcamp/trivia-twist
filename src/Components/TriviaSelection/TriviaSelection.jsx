@@ -114,14 +114,6 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
               ></img>
             </div>
             </div>
-
-
-          {/* <select value={selectedCategory} onChange={handleSelectCategory}>
-            <option value="">Select Category</option>
-            {Object.keys(triviaCategories).map((category) => (
-              <option key={category} value={category}>{category}</option>
-            ))}
-          </select> */}
         </>
       )}
 
@@ -147,9 +139,7 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
 
       {selectedCategory && selectedDifficulty && !quizStarted && (
         <div>
-          <button onClick={handleStartQuiz}>
-            Start {selectedCategory} ( {selectedDifficulty} ) Quiz
-          </button>
+          { handleStartQuiz() }
         </div>
       )}
     </div>
