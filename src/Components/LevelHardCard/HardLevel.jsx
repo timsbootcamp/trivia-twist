@@ -8,8 +8,8 @@ const HardCard = ({ SelectedDifficulty }) => {
   };
 
   return (
-    <button className='Hard mt-5 mb-5 col-sm-12 col-md-4' onClick={handleSelectDifficulty}>
- <svg
+    <button className='difficultybtn mt-5 mb-5 col-sm-12 col-md-4' onClick={handleSelectDifficulty}>
+ <svg className='Hard'
     xmlns="http://www.w3.org/2000/svg"
     width={399}
     height={455}
