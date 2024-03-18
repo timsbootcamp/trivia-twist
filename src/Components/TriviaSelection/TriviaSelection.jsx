@@ -58,12 +58,12 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
         <>
           <img
             className="BgGraphics"
-            src="src\assets\Elements\Categories-Page-Elements\2D-BG-Elemnts.png"
+            src="src\assets\Categories-Page-Elements\2D-BG-Elemnts.png"
           ></img>
 
           <div class="columns">
             <div class="column logoIcon">
-              <img src="src\assets\Elements\Categories-Page-Elements\Logo.png"></img>
+              <img src="src\assets\Categories-Page-Elements\Logo.png"></img>
             </div>
           </div>
 
@@ -71,7 +71,7 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
             <div class="column is-two-quarters">
               <img
                 className="cubes"
-                src="src\assets\Elements\Categories-Page-Elements\left side cubes.svg"
+                src="src\assets\Categories-Page-Elements\left side cubes.svg"
               ></img>
             </div>
 
@@ -110,7 +110,7 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
             <div class="column is-one-quarters">
               <img
                 className="cubes"
-                src="src\assets\Elements\Categories-Page-Elements\right side cubes.svg"
+                src="src\assets\Categories-Page-Elements\right side cubes.svg"
               ></img>
             </div>
             </div>
