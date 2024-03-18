@@ -29,7 +29,7 @@ const QuizResult = ({ score }) => {
           </div>
 
 <div class="column is-one-third">
-<img className="logo" src="src\assets\Final-Score-Page\Logo.png"></img>
+<img className="logo" src="src\assets\Logo.png"></img>
 <h2>Quiz Completed!</h2>
       <p>Your score: {score}</p>
   
