@@ -1,0 +1,10 @@
+.background-elements{
+    z-index:1;
+    position: absolute;
+
+}
+
+.btn{
+    z-index: 3;
+    position: relative;
+}
