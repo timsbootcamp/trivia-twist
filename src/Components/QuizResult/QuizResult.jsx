@@ -22,14 +22,14 @@ const QuizResult = ({ score }) => {
         </div>
       ) : (
       <div> 
-        <img className="background-elements" src="src\assets\Elements\Final-Score-Page\Fuchsia and Pink Trivia Night Instagram Story (Website) (8).png"></img>
+        {/* <img className="background-elements" src="src\assets\Main-Page-Elements\Fuchsia and Pink Trivia Night Instagram Story (Website) (3).png"></img> */}
         <div class="columns">
          <div class="column is-one-third">
-          <img src="src\assets\Elements\Final-Score-Page\left side cubes.svg"></img>
+          {/* <img src="src\asset\Final-Score-Page\left side cubes.svg"></img> */}
           </div>
 
 <div class="column is-one-third">
-<img className="logo" src="src\assets\Elements\Final-Score-Page\Logo.png"></img>
+<img className="logo" src="src\assets\Final-Score-Page\Logo.png"></img>
 <h2>Quiz Completed!</h2>
       <p>Your score: {score}</p>
   
@@ -48,7 +48,7 @@ const QuizResult = ({ score }) => {
 
 
        <div class="column is-one-third">
-          <img src="src\assets\Elements\Final-Score-Page\right side cubes.svg"></img>
+          {/* <img src="src\assets\Final-Score-Page\right side cubes.svg"></img> */}
        </div>
        </div>
        </div>
