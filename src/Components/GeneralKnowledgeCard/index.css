@@ -2,3 +2,9 @@
     fill:whitesmoke
  }
  
+ .btn {
+    background-color: transparent;
+    border: none;
+    transform: scale(0.5);
+    padding:0;
+ }
