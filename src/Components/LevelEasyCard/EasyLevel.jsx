@@ -8,7 +8,7 @@ const EasyCard = ({ SelectedDifficulty }) => {
   };
 
   return (
-    <button className='btn mt-5 mb-5 col-sm-12 col-md-4' onClick={handleSelectDifficulty}>
+    <button className='difficultybtn mt-5 mb-5 col-sm-12 col-md-4' onClick={handleSelectDifficulty}>
 <svg className='Easy'
     xmlns="http://www.w3.org/2000/svg"
     width={399}
