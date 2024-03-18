@@ -12,14 +12,14 @@ const Leaderboard = () => {
 
   return (
     <div>
-       <img className="background-elements" src="src\assets\2D-BG-Elements.png"></img>
+       <img className="background-elements" src="./assets/2D-BG-Elements.png"></img>
         <div class="columns">
          <div class="column is-one-third">
-          <img src="src\assets\left side cubes.svg"></img>
+          <img src="\assets\left side cubes.svg"></img>
           </div>
 
 <div class="column is-one-third">
-<img className="logo" src="src\assets\Logo.png"></img>
+<img className="logo" src="/Logo.png"></img>
       <h2>Leaderboard</h2>
       <ul>
         {topFiveScores.map((player, index) => (
