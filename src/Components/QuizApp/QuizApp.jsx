@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Question from '../Question/Question';
-import QuizResult from '../QuizResult/QuizResult'; 
-
+import QuizResult from '../QuizResult/QuizResult';
 
 const QuizApp = ({ triviaUrl }) => {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [userAnswers, setUserAnswers] = useState([]);
-  const [score, setScore] = useState(0);
-  const [quizData, setQuizData] = useState([]);
-  const [loading, setLoading] = useState(true);
+ const [currentQuestion, setCurrentQuestion] = useState(0);
+ const [userAnswers, setUserAnswers] = useState([]);
+ const [score, setScore] = useState(0);
+ const [quizData, setQuizData] = useState([]);
+ const [loading, setLoading] = useState(true);
+ const [isSubmitted, setIsSubmitted] = useState(false);
 
-
-  useEffect(() => {
+ useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(triviaUrl);
@@ -19,7 +18,6 @@ const QuizApp = ({ triviaUrl }) => {
           throw new Error('Failed to fetch quiz data');
         }
         const responseData = await response.json();
-        console.log(responseData);
         const formattedData = formatQuizData(responseData.results);
         setQuizData(formattedData);
         setLoading(false);
@@ -29,51 +27,51 @@ const QuizApp = ({ triviaUrl }) => {
       }
     };
 
-
     fetchData();
-  }, [triviaUrl]);
+ }, [triviaUrl]);
 
-
-  const formatQuizData = (data) => {
+ const formatQuizData = (data) => {
     return data.map((questionData, index) => ({
       id: index + 1,
       question: `Question ${index + 1}: ${questionData.question}`,
       options: [questionData.correct_answer, ...questionData.incorrect_answers].sort(() => Math.random() - 0.5),
       correctAnswer: questionData.correct_answer,
     }));
-  };
+ };
 
-
-  const handleAnswer = (selectedAnswer) => {
+ const handleAnswer = (selectedAnswer) => {
     const isCorrect = selectedAnswer === quizData[currentQuestion].correctAnswer;
     setUserAnswers([...userAnswers, { questionId: currentQuestion, selectedAnswer, isCorrect }]);
     if (isCorrect) {
       setScore(score + 1);
     }
-  };
+    setIsSubmitted(true);
 
+    setTimeout(() => {
+      nextQuestion();
+    }, 500);
+ };
 
-  const nextQuestion = () => {
+ const nextQuestion = () => {
     setCurrentQuestion(currentQuestion + 1);
-  };
+    setIsSubmitted(false);
+ };
 
-
-  if (loading) {
+ if (loading) {
     return <div>Loading...</div>;
-  }
+ }
 
-
-  if (currentQuestion < quizData.length) {
+ if (currentQuestion < quizData.length) {
     return (
       <Question
         questionData={quizData[currentQuestion]}
         onAnswer={handleAnswer}
-        onNext={nextQuestion}
+        isSubmitted={isSubmitted}
       />
     );
-  } else {
+ } else {
     return <QuizResult score={score} />;
-  }
+ }
 };
 
 export default QuizApp;
