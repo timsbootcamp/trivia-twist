@@ -1,17 +1,18 @@
 import React from 'react';
+import { decodeHTMLEntities } from "../../Lib/formatting";
 
 const AnswerOption = ({ option, selected, onSelect }) => {
   return (
-    <li>
+    <li className='answers'>
       <label>
         <input
           type="radio"
           name="options"
-          value={option}
+          value={decodeHTMLEntities(option)}
           checked={selected}
           onChange={() => onSelect(option)}
         />
-        {option}
+        {decodeHTMLEntities(option)}
       </label>
     </li>
   );

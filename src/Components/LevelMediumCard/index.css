@@ -1,0 +1,9 @@
+.Medium:hover{
+    fill:blue
+}
+
+.difficultybtn {
+    background-color: transparent;
+    border: none;
+    transform: scale(0.5);
+ }
