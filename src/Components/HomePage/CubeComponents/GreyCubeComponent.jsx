@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import anime from "animejs/lib/anime.es.js";
-import GreyCube from "../../../assets/GreyCube.svg";
+import GreyCube from "/assets/GreyCube.svg";
 import "./GreyCube.css";
-const GreyCubeComponent = ({ position }) => {
+const GreyCubeComponent = () => {
   useEffect(() => {
-    if (position) {
+ {
       anime({
         targets: `.greyCubeContainer`,
         translateX: 50,
@@ -14,11 +14,12 @@ const GreyCubeComponent = ({ position }) => {
         direction: "alternate",
       });
     }
-  }, [position]);
+  }, 
+  );
 
   return (
     <div className="greyCubeContainer">
-      <img src="/src/assets/GreyCube.svg" alt="GreyCube" className="greyCube" />
+      <img src="assets/GreyCube.svg" alt="GreyCube" className="greyCube" />
     </div>
   );
 };

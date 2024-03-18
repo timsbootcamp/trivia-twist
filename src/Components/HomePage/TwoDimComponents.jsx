@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import anime from "animejs/lib/anime.es.js";
-import TwoDimShapes from '../../assets/TwoDimShapes.svg';
+import TwoDimShapes from '/assets/TwoDimShapes.svg';
 
 export const TwoDimComponents = () => {
   useEffect(() => {

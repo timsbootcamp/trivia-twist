@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import anime from "animejs/lib/anime.es.js";
-import PurpleCube from '../../../assets/PurpleCube.svg';
+import PurpleCube from "/assets/PurpleCube.svg";
 import "./PurpleCube.css";
 
 const PurpleCubeComponent = () => {

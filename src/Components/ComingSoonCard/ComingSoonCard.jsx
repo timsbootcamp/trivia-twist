@@ -7,7 +7,7 @@ const ComingSoonCard = ({ onSelectCategory }) => {
   };
 
     return (
-      <button className='btn' onClick={handleSelectCategory}>
+      <button className='categoryBtn' onClick={handleSelectCategory}>
       <svg className='ComingSoon'
       xmlns="http://www.w3.org/2000/svg"
       width="100%"

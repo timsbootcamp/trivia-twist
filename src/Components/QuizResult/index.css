@@ -13,3 +13,13 @@
     position:absolute;
     
 }
+
+.btn {
+padding-top: 2%;
+margin-top: 170%;
+background-color:#D0FF96;
+font-size: 250%;
+font-weight: bold;
+border: black solid;
+border-radius: 20px;
+}

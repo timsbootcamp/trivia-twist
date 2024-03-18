@@ -30,7 +30,7 @@ width: inherit;
     top: 0;
     left: 0;
     right: 0;
-    height: 25%; /* You can adjust this height as needed */
+    height: 15%; /* You can adjust this height as needed */
     transform: scale(0.5);
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Columns, Container } from "react-bulma-components";
-import TriviaTwistLogo from "../../assets/TriviaTwistLogoWithLights.svg";
+import TriviaTwistLogo from "/assets/main-page-logo.png";
 import TriviaSelection from "../TriviaSelection/TriviaSelection";
 import QuizApp from "../QuizApp/QuizApp";
 import TwoDimComponents from "../../Components/HomePage/TwoDimComponents";
@@ -15,7 +15,7 @@ function HomePage() {
   const [selectedUrl, setSelectedUrl] = useState(null);
 
   const handleStartClick = () => {
-    setIsHomePageVisible(false);
+    setIsHomePageVisible(false); // Set isHomePageVisible to false when Start button is clicked
   };
 
   const handleSelectDifficulty = (url) => {
@@ -23,9 +23,53 @@ function HomePage() {
   };
 
   return (
-    <Container className="homePage">
+    <div className="HomePage">
       {isHomePageVisible ? (
-        <Columns>
+        <>
+           <img
+            className="BgGraphics"
+            src="\assets\2d-main-page-elements.png"
+          ></img>
+
+          <div className="columns">
+            <div className="column is-full logoMain">
+              <img src='/assets/main-page-logo.png'></img>
+            </div>
+          </div>
+
+      
+          <div className="columns">
+          <div className="column is-one-third">
+              <div></div>
+            </div>
+
+            <div className="column is-one-third">
+            <Button className="btn is-rounded " color="" onClick={handleStartClick}>
+                Start
+              </Button>
+            </div>
+
+            <div className="column is-one-third">
+              <div></div>
+            </div>
+         
+
+     
+            </div>
+
+      
+
+          
+          <div className="columns">
+            <div className="column is-two-quarters">
+              
+                <GreyCubeComponent/>
+              
+            </div>
+            </div>
+
+          
+        {/* <Columns>
           <Columns.Column>
             <GreyCubeComponent />
             <PinkCubeComponent />
@@ -42,15 +86,19 @@ function HomePage() {
           <Columns.Column>
           <TwoDimComponents />
           </Columns.Column>
-        </Columns>
+        </Columns> */}
+        </>
       ) : (
-        <TriviaSelectionContainer
-          onSelectDifficulty={handleSelectDifficulty}
-          selectedUrl={selectedUrl}
-        />
+        <div>
+          {<div>
+      <TriviaSelection onSelectDifficulty={handleSelectDifficulty} />     
+      {selectedUrl && <QuizApp triviaUrl={selectedUrl} />}
+    </div>}
+       
+        </div>
       )}
-    </Container>
-  );
+    </div>
+ );
 }
 
 export default HomePage;

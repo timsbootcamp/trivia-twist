@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import anime from "animejs/lib/anime.es.js";
-import PinkCube from '../../../assets/PinkCube.svg';
+import PinkCube from '/assets/PinkCube.svg';
 import "./PinkCube.css";
 
 const PinkCubeComponent = () => {

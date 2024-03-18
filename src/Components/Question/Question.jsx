@@ -27,14 +27,14 @@ const Question = ({ questionData, onAnswer, onNext }) => {
         src="./assets/2D-BG-Elements.png"
       ></img>
 
-      <div class="columns">
-        <div class="column logoIcon">
+      <div className="columns">
+        <div className="column logoIcon">
           <img src="/Logo.png"></img>
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column is-one-third">
+      <div className="columns">
+        <div className="column is-one-third">
           <img
             className="cubes"
             src="/assets/left side cubes.svg"
@@ -43,8 +43,8 @@ const Question = ({ questionData, onAnswer, onNext }) => {
 
 
       <Container className="questionContainer">
-        <div class="columns">
-          <div class="column is-full">
+        <div className="columns">
+          <div className="column is-full">
             <div
               style={{
                 display: "block",
@@ -81,7 +81,7 @@ const Question = ({ questionData, onAnswer, onNext }) => {
         </div>
       </Container>
 
-      <div class="column is-one-third">
+      <div className="column is-one-third">
         <img
           className="cubes"
           src="/assets/right side cubes.svg"

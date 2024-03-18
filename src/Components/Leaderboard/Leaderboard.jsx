@@ -28,7 +28,7 @@ const Leaderboard = () => {
           </li>
         ))}
       </ul>
-      <div><button className="btn" onClick={refreshPage}>Go Home</button></div>
+      <div><button className="btn is-rounded" onClick={refreshPage}>Go Home</button></div>
     </div>
     </div>
     </div>

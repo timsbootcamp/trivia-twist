@@ -1,5 +1,5 @@
 import React from 'react';
-import TriviaTwistLogoWithLights from '../assets/TriviaTwistLogoWithLights.svg';
+import TriviaTwistLogoWithLights from '/assets/TriviaTwistLogoWithLights.svg';
 
 const LogoComponent = () => {
   return (

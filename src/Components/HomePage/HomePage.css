@@ -48,3 +48,23 @@ body {
 /* .hide {
   display: hide;
 } */
+
+.BgGraphics {
+  z-index: 1;
+  position: absolute;
+  transform: scale(0.9);
+  overflow: hidden;
+}
+
+.logoMain{
+  padding-top: 0px;
+  transform: scale(0.5);
+}
+
+.btn {
+  background-color:#D0FF96;
+  font-size: 250%;
+  font-weight: bold;
+  border: black solid;
+  border-radius: 20px;
+}

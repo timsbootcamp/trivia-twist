@@ -61,14 +61,14 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
             src="\assets\2D-BG-Elements.png"
           ></img>
 
-          <div class="columns">
-            <div class="column logoIcon">
+          <div className="columns">
+            <div className="column logoIcon">
               <img src='/Logo.png'></img>
             </div>
           </div>
 
-          <div class="columns">
-            <div class="column is-two-quarters">
+          <div className="columns">
+            <div className="column is-two-quarters">
               <img
                 className="cubes"
                 src="/assets/left side cubes.svg"
@@ -77,8 +77,8 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
 
 
             <Container className="categoryBtns">
-              <div class="columns">
-                <div class="column is-one-half">
+              <div className="columns">
+                <div className="column is-one-half">
                   <AnimalCard
                     className="tile categorybtn"
                     onSelectCategory={handleSelectCategory}
@@ -93,7 +93,7 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
                   />
                 </div>
 
-                <div class="column is-one-half">
+                <div className="column is-one-half">
                   <MusicCard
                     className="tile categorybtn"
                     onSelectCategory={handleSelectCategory}
@@ -107,7 +107,7 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
               </div>
             </Container>
 
-            <div class="column is-one-quarters">
+            <div className="column is-one-quarters">
               <img
                 className="cubes"
                 src="\assets\right side cubes.svg"
