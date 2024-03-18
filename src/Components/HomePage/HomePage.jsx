@@ -1,13 +1,13 @@
 import React, { useState } from "react";
+import { Button, Columns, Container } from "react-bulma-components";
+import TriviaTwistLogo from "../../assets/TriviaTwistLogoWithLights.svg";
 import TriviaSelection from "../TriviaSelection/TriviaSelection";
 import QuizApp from "../QuizApp/QuizApp";
-import HomePageContent from "./HomePageContent";
-import TriviaTwistLogoWithLights from "../../assets/TriviaTwistLogoWithLights.svg";
-import { Button } from "materialize-css";
-import "materialize-css/dist/css/materialize.min.css";
 import TwoDimComponents from "../../Components/HomePage/TwoDimComponents";
-import GreyCubeComponent from "../HomePage/GreyCubeComponent";
-import PinkCubeComponent from "../HomePage/PinkCubeComponent";
+import GreyCubeComponent from "../HomePage/CubeComponents/GreyCubeComponent";
+import PinkCubeComponent from "../HomePage/CubeComponents/PinkCubeComponent";
+import PurpleCubeComponent from "../HomePage/CubeComponents/PurpleCubeComponent";
+import LogoComponent from "../LogoComponent";
 import "./HomePage.css";
 
 function HomePage() {
@@ -17,32 +17,39 @@ function HomePage() {
   const handleStartClick = () => {
     setIsHomePageVisible(false);
   };
+
   const handleSelectDifficulty = (url) => {
     setSelectedUrl(url);
   };
 
   return (
-    <div className="container homePage">
+    <Container className="homePage">
       {isHomePageVisible ? (
-          <HomePageContent />
+        <Columns>
+          <Columns.Column>
+            <GreyCubeComponent />
+            <PinkCubeComponent />
+            <TwoDimComponents />
+          </Columns.Column>
+          <Columns.Column>
+            <Container className="has-text-centered">
+              <LogoComponent />
+              <Button color="primary" onClick={handleStartClick}>
+                Start
+              </Button>
+            </Container>
+          </Columns.Column>
+          <Columns.Column>
+          <TwoDimComponents />
+          </Columns.Column>
+        </Columns>
       ) : (
         <TriviaSelectionContainer
           onSelectDifficulty={handleSelectDifficulty}
           selectedUrl={selectedUrl}
         />
       )}
-      <div className="row">
-        <div className="col s4">
-          <GreyCubeComponent />
-        </div>
-        <div className="col s4">
-          <PinkCubeComponent />
-        </div>
-        <div className="col s4">
-          <TwoDimComponents />
-        </div>
-      </div>
-    </div>
+    </Container>
   );
 }
 

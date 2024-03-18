@@ -1,10 +1,5 @@
-.twoDimContainer {
+.twoDim {
   position: absolute;
-  top: 50%;
-  left: 60%;
-  transform: translate(-50%, -50%);
+  transform: scale(0.5);
   z-index: 0;
-  width: 10%;
-  max-width: 10vw;
-  height: auto;
 }

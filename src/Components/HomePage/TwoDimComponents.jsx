@@ -15,7 +15,7 @@ export const TwoDimComponents = () => {
 
   return (
     <div>
-      <img src={TwoDimShapes} alt="TwoDimShapes" />
+      <img src={TwoDimShapes} alt="TwoDimShapes" className= "TwoDim" />
     </div>
   );
 };
