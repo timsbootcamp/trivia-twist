@@ -1,3 +1,9 @@
 .Easy:hover{
     fill:darkgreen
 }
+
+.btn {
+    background-color: transparent;
+    border: none;
+    transform: scale(0.5);
+ }
