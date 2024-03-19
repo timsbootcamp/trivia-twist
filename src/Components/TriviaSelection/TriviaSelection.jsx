@@ -56,29 +56,29 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
     <div>
       {!selectedCategory && (
         <>
-          <img
+          {/* <img
             className="BgGraphics"
             src="\assets\2D-BG-Elements.png"
-          ></img>
+          ></img> */}
 
-          <div className="columns">
+          {/* <div className="columns">
             <div className="column logoIcon">
               <img src='/Logo.png'></img>
             </div>
-          </div>
+          </div> */}
 
           <div className="columns">
-            <div className="column is-two-quarters">
+            {/* <div className="column is-two-third">
               <img
-                className="cubes"
-                src="/assets/left side cubes.svg"
+                className="sidebysideCubes"
+                src="/public/sidebysidecubes.png"
               ></img>
-            </div>
+            </div> */}
 
 
             <Container className="categoryBtns">
               <div className="columns">
-                <div className="column is-one-half">
+                <div className="column is-one-third">
                   <AnimalCard
                     className="tile categorybtn"
                     onSelectCategory={handleSelectCategory}
@@ -87,17 +87,20 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
                     className="tile categorybtn"
                     onSelectCategory={handleSelectCategory}
                   />
+                </div>
+
+                <div className="column is-one-third">
                   <ScienceNatureCard
+                    className="tile categorybtn"
+                    onSelectCategory={handleSelectCategory}
+                  />
+                      <MusicCard
                     className="tile categorybtn"
                     onSelectCategory={handleSelectCategory}
                   />
                 </div>
 
-                <div className="column is-one-half">
-                  <MusicCard
-                    className="tile categorybtn"
-                    onSelectCategory={handleSelectCategory}
-                  />
+                <div className="column is-one-third">            
                   <SportsCard
                     className="tile categorybtn"
                     onSelectCategory={handleSelectCategory}
@@ -105,14 +108,15 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
                   <ComingSoonCard className="tile categorybtn"></ComingSoonCard>
                 </div>
               </div>
+        
             </Container>
 
-            <div className="column is-one-quarters">
+            {/* <div className="column is-one-third">
               <img
-                className="cubes"
-                src="\assets\right side cubes.svg"
+                className="sidebysideCubes"
+                src="\public\sidebysideCubes.png"
               ></img>
-            </div>
+            </div> */}
             </div>
         </>
       )}
@@ -120,10 +124,54 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
       {selectedCategory && !selectedDifficulty && (
         <div>
           <h2>Select Trivia Difficulty:</h2>
-          <EasyCard SelectedDifficulty={setSelectedDifficulty} />
-          <MediumCard SelectedDifficulty={setSelectedDifficulty} />
-          <HardCard SelectedDifficulty={setSelectedDifficulty} />
-          <select
+
+          {/* <Container className="categoryBtns">
+              <div className="columns">
+                <div className="column is-one-third">
+                <EasyCard SelectedDifficulty={setSelectedDifficulty} />
+                </div>
+                </div>
+
+                <div className="columns">
+                <div className="column is-one-third">
+                <MediumCard SelectedDifficulty={setSelectedDifficulty} />
+                </div>
+                </div>
+
+                <div className="columns">
+                <div className="column is-one-third">
+                <HardCard SelectedDifficulty={setSelectedDifficulty} />
+               </div>
+               </div>
+
+                </Container> */}
+       
+
+                <div className="difficultyContainer">
+                <div className="easyCard">
+                <div className="column is-one-third">
+                <EasyCard SelectedDifficulty={setSelectedDifficulty} />
+                </div>
+                </div>
+  
+              <div className="mediumCard">
+                <div className="column is-one-third">
+                <MediumCard SelectedDifficulty={setSelectedDifficulty} />
+                </div>
+                </div>
+
+                <div className="hardCard">
+                <div className="column is-one-third">
+                <HardCard SelectedDifficulty={setSelectedDifficulty} />
+               </div>
+               </div>
+
+              </div>
+
+
+
+
+          {/* <select
             value={selectedDifficulty}
             onChange={(e) => setSelectedDifficulty(e.target.value)}
           >
@@ -133,7 +181,7 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
                 {difficulty}
               </option>
             ))}
-          </select>
+          </select> */}
         </div>
       )}
 

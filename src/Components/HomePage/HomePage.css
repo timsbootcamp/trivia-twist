@@ -1,31 +1,50 @@
 body {
-  background-color: #8c52ff;
-  background-image: linear-gradient(90deg, #8c52ff 0%, #5ce1e6 100%);
-  overflow: hidden;
-}
-
-.homePage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* background-color: #8c52ff; */
+  /* background-image: url('/assets/2d-main-page-elements.png'), linear-gradient(90deg, #8c52ff, #5ce1e6);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: contain;
   height: 100vh;
+  overflow: hidden; */
 }
 
-.homePageContent {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
+.HomePage {
+  background-image: url('/assets/2d-main-page-elements.png'), linear-gradient(90deg, #8c52ff, #5ce1e6);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.topContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 
 .logo-container {
-  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .logo {
-  width: 50%;
+  width: 600px;
   height: auto;
-  max-width: 300px;
-  transform: scale(0.75);
+  
+}
+
+.contentContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .startButton {
@@ -40,6 +59,26 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
+.buttonContainer{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.yellowButton{
+  background-color: whitesmoke;
+  box-shadow: black;
+}
+
+
+.cubeContainer{
+  align-items: center;
+  /* justify-content:end; */
+  display: flex;
+}
+
+
 
 .startButton:hover {
   background-color: #f2f2f2;

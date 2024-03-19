@@ -1,5 +1,6 @@
 import React from "react";
 import { readScoresFromLocalStorage } from "../../Lib/localStorage";
+import './index.css'
 
 const Leaderboard = () => {
   let scoresPlayers = readScoresFromLocalStorage();
@@ -11,8 +12,8 @@ const Leaderboard = () => {
 }
 
   return (
-    <div>
-       <img className="background-elements" src="./assets/2D-BG-Elements.png"></img>
+    <div className="leaderboard">
+       {/* <img className="background-elements" src="./assets/2D-BG-Elements.png"></img> */}
         <div class="columns">
          <div class="column is-one-third">
           <img src="\assets\left side cubes.svg"></img>

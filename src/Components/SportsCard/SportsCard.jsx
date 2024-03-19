@@ -10,8 +10,8 @@ const SportsCard = ({ onSelectCategory }) => {
     <button className='categoryBtn' onClick={handleSelectCategory}>
 <svg className='Sports'
       xmlns="http://www.w3.org/2000/svg"
-      width="103%"
-      height="100%"
+      width="399"
+      height="455"
       version="1"
       viewBox="0 0 300 341.25"
     >

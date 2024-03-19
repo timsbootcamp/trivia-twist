@@ -26,50 +26,40 @@ function HomePage() {
     <div className="HomePage">
       {isHomePageVisible ? (
         <>
-           <img
+          {/* <img
             className="BgGraphics"
             src="\assets\2d-main-page-elements.png"
-          ></img>
+          ></img> */}
 
-          <div className="columns">
-            <div className="column is-full logoMain">
-              <img src='/assets/main-page-logo.png'></img>
+          <div className="topContainer">
+            {/* <div className="column is-full logoMain"> */}
+              <img src="/assets/main-page-logo.png" className="logo"></img>
             </div>
-          </div>
+          {/* </div> */}
+          
 
-      
-          <div className="columns">
-          <div className="column is-one-third">
-              <div></div>
+          <div className="contentContainer">
+          <div className="cubeContainer">
+              <GreyCubeComponent />
             </div>
 
-            <div className="column is-one-third">
-            <Button className="btn is-rounded " color="" onClick={handleStartClick}>
+            <div className="buttonContainer">
+              <Button
+                className="yellowButton "
+                color=""
+                onClick={handleStartClick}
+              >
                 Start
               </Button>
             </div>
 
-            <div className="column is-one-third">
-              <div></div>
-            </div>
-         
 
-     
+            <div className="cubeContainer">
+              <GreyCubeComponent />
             </div>
+          </div>
 
-      
-
-          
-          <div className="columns">
-            <div className="column is-two-quarters">
-              
-                <GreyCubeComponent/>
-              
-            </div>
-            </div>
-
-          
-        {/* <Columns>
+          {/* <Columns>
           <Columns.Column>
             <GreyCubeComponent />
             <PinkCubeComponent />
@@ -90,15 +80,16 @@ function HomePage() {
         </>
       ) : (
         <div>
-          {<div>
-      <TriviaSelection onSelectDifficulty={handleSelectDifficulty} />     
-      {selectedUrl && <QuizApp triviaUrl={selectedUrl} />}
-    </div>}
-       
+          {
+            <div>
+              <TriviaSelection onSelectDifficulty={handleSelectDifficulty} />
+              {selectedUrl && <QuizApp triviaUrl={selectedUrl} />}
+            </div>
+          }
         </div>
       )}
     </div>
- );
+  );
 }
 
 export default HomePage;
