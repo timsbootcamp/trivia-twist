@@ -7,11 +7,11 @@ const MusicCard = ({ onSelectCategory }) => {
   };
 
   return (
-    <button className='btn'  onClick={handleSelectCategory}>
-<svg className='Music'
+    <button className='categoryBtn'  onClick={handleSelectCategory}>
+<svg className='MusicCard'
       xmlns="http://www.w3.org/2000/svg"
-      width="100%"
-      height="100%"
+      width="399"
+      height="455"
       version="1"
       viewBox="0 0 286.5 341.25"
     >

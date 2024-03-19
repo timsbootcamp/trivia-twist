@@ -1,0 +1,9 @@
+.pinkCubeContainer {
+  position: absolute;
+}
+
+.pinkCube {
+  width: auto;
+  height: auto;
+  transform: scale(0.5)
+}

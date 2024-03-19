@@ -7,11 +7,11 @@ const GenKnoCards = ({ onSelectCategory }) => {
   };
 
   return (
-    <button className='btn' onClick={handleSelectCategory}>
+    <button className='categoryBtn' onClick={handleSelectCategory}>
   <svg className='GenKno'
       xmlns="http://www.w3.org/2000/svg"
-      width="100%"
-      height="100%"
+      width="399"
+      height="455"
       version="1"
       viewBox="0 0 299.25 341.25"
     >

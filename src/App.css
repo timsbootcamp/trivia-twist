@@ -42,15 +42,15 @@
 }
  */
 
+
 .app {
-   /* Set the background image */
-   background-image: url('/Background-Image.png');
-   /* Set background size and other properties as needed */
-   background-size: cover;
-   background-position: center;
+display: flex;
+flex-direction: column;
+align-items: center;
    /* Set minimum height to fill the viewport */
    min-height: 100vh;
    /* Add more styles as needed */
    width:100%;
    height:100%;
+
 }

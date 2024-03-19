@@ -17,9 +17,9 @@ const Leaderboard = () => {
   const [clickSound] = useSound(ClickSound);
 
   return (
-    <div>
+    <div className="leaderboard">
       {playCheers()}
-      <img className="background-elements" src="./assets/2D-BG-Elements.png"></img>
+      {/* <img className="background-elements" src="./assets/2D-BG-Elements.png"></img> */}
       <div class="columns">
         <div class="column is-one-third">
           <img src="\assets\left side cubes.svg"></img>

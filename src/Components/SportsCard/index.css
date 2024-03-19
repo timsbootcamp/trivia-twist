@@ -2,3 +2,8 @@
     fill:whitesmoke
  }
  
+ .categoryBtn {
+    background-color: transparent;
+    border: none;
+    transform: scale(0.5);
+ }

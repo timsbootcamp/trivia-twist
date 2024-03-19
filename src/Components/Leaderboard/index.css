@@ -1,3 +1,15 @@
+.leaderboard {
+    /* background-color: #8c52ff; */
+    background-image: url('/assets/2D-BG-Elements.png'), linear-gradient(90deg, #8c52ff, #5ce1e6);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 100vh;
+    overflow: hidden;
+    
+  }
+
+
 .background-elements{
     z-index:1;
     position: absolute;
@@ -7,4 +19,11 @@
 .btn{
     z-index: 3;
     position: relative;
+    padding-top: 2%;
+    margin-top: 170%;
+    background-color:#D0FF96;
+    font-size: 250%;
+    font-weight: bold;
+    border: black solid;
+    border-radius: 20px;
 }

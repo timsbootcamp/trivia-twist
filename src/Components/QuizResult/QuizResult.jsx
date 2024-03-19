@@ -42,7 +42,7 @@ const QuizResult = ({ score }) => {
               onChange={(e) => setInitials(e.target.value)}
             />
           </label>
-          <button type="submit">Submit</button>
+          <button  type="submit">Submit</button>
         </form>
         </div>
 

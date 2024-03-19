@@ -1,3 +1,109 @@
-/* .hide{
-    display: hide;
+body {
+  /* background-color: #8c52ff; */
+  /* background-image: url('/assets/2d-main-page-elements.png'), linear-gradient(90deg, #8c52ff, #5ce1e6);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100vh;
+  overflow: hidden; */
+}
+
+.HomePage {
+  background-image: url('/assets/2d-main-page-elements.png'), linear-gradient(90deg, #8c52ff, #5ce1e6);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.logo-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.logo {
+  width: 600px;
+  height: auto;
+  
+}
+
+.contentContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.startButton {
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  color: #8c52ff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonContainer{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.yellowButton{
+  background-color: whitesmoke;
+  box-shadow: black;
+}
+
+
+.cubeContainer{
+  align-items: center;
+  /* justify-content:end; */
+  display: flex;
+}
+
+
+
+.startButton:hover {
+  background-color: #f2f2f2;
+}
+
+/* .hide {
+  display: hide;
 } */
+
+.BgGraphics {
+  z-index: 1;
+  position: absolute;
+  transform: scale(0.9);
+  overflow: hidden;
+}
+
+.logoMain{
+  padding-top: 0px;
+  transform: scale(0.5);
+}
+
+.btn {
+  background-color:#D0FF96;
+  font-size: 250%;
+  font-weight: bold;
+  border: black solid;
+  border-radius: 20px;
+}
