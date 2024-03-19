@@ -1,5 +1,8 @@
 import React from "react";
 import { readScoresFromLocalStorage } from "../../Lib/localStorage";
+import useSound from 'use-sound';
+import correctSfx from '../../Lib/CorrectAnswerSound.wav';
+
 
 const Leaderboard = () => {
   let scoresPlayers = readScoresFromLocalStorage();
