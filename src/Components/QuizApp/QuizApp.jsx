@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Question from '../Question/Question';
 import QuizResult from '../QuizResult/QuizResult'; 
-
+import useSound from 'use-sound';
+import correctSfx from '../../Sounds/CorrectAnswerSound.wav';
+import wrongSfx from '../../Sounds/WrongAnswerSound.wav';
 
 const QuizApp = ({ triviaUrl }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -43,13 +45,18 @@ const QuizApp = ({ triviaUrl }) => {
     }));
   };
 
-
+ 
+  const [playCorrect] = useSound(correctSfx);
+  const [playWrong] = useSound(wrongSfx);
   const handleAnswer = (selectedAnswer) => {
     const isCorrect = selectedAnswer === quizData[currentQuestion].correctAnswer;
     setUserAnswers([...userAnswers, { questionId: currentQuestion, selectedAnswer, isCorrect }]);
     if (isCorrect) {
       setScore(score + 1);
-    }
+      playCorrect()
+    } else(
+      playWrong()
+    )
   };
 
 
@@ -62,7 +69,6 @@ const QuizApp = ({ triviaUrl }) => {
     return <div>Loading...</div>;
   }
 
-
   if (currentQuestion < quizData.length) {
     return (
       <Question
@@ -72,7 +78,10 @@ const QuizApp = ({ triviaUrl }) => {
       />
     );
   } else {
-    return <QuizResult score={score} />;
+    return (
+
+    <QuizResult score={score} />
+    );
   }
 };
 

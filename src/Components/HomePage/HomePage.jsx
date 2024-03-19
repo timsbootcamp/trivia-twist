@@ -8,19 +8,27 @@ import GreyCubeComponent from "../HomePage/CubeComponents/GreyCubeComponent";
 import PinkCubeComponent from "../HomePage/CubeComponents/PinkCubeComponent";
 import PurpleCubeComponent from "../HomePage/CubeComponents/PurpleCubeComponent";
 import LogoComponent from "../LogoComponent";
+import useSound from 'use-sound';
 import "./HomePage.css";
+import TriviaSelection from '../TriviaSelection/TriviaSelection';
+import QuizApp from '../QuizApp/QuizApp';
+import ClickSound from "../../Sounds/ButtonClickSound.wav";
 
 function HomePage() {
   const [isHomePageVisible, setIsHomePageVisible] = useState(true);
   const [selectedUrl, setSelectedUrl] = useState(null);
 
   const handleStartClick = () => {
-    setIsHomePageVisible(false); // Set isHomePageVisible to false when Start button is clicked
+    setIsHomePageVisible(false);
   };
+
+  const [selectedUrl, setSelectedUrl] = useState(null);
 
   const handleSelectDifficulty = (url) => {
     setSelectedUrl(url);
   };
+
+  const [clickSound] = useSound(ClickSound);
 
   return (
     <div className="HomePage">
@@ -80,12 +88,12 @@ function HomePage() {
         </>
       ) : (
         <div>
-          {
-            <div>
-              <TriviaSelection onSelectDifficulty={handleSelectDifficulty} />
-              {selectedUrl && <QuizApp triviaUrl={selectedUrl} />}
-            </div>
-          }
+          {<div>
+            {clickSound()}
+            <TriviaSelection onSelectDifficulty={handleSelectDifficulty} />
+            {selectedUrl && <QuizApp triviaUrl={selectedUrl} />}
+          </div>}
+
         </div>
       )}
     </div>

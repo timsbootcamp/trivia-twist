@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useSound from "use-sound";
 import AnimalCard from "../AnimalCard/AnimalCard";
 import GenKnowCards from "../GeneralKnowledgeCard/Genkno";
 import SportsCard from "../SportsCard/SportsCard";
@@ -11,12 +12,16 @@ import MediumCard from "../LevelMediumCard/MediumLevel";
 import "bulma/css/bulma.min.css";
 import "./index.css";
 import { Container } from "react-bulma-components";
+import ClickSound from "../../Sounds/ButtonClickSound.wav"
+
+
 
 const generateTriviaUrl = (category, difficulty) => {
   return `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}&type=multiple`;
 };
 
 const TriviaSelection = ({ onSelectDifficulty }) => {
+const [clickSound] = useSound(ClickSound);
   const triviaCategories = {
     Animals: 27,
     "Entertainment: Music": 12,
@@ -31,6 +36,7 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
 
   const handleSelectCategory = (category) => {
     setSelectedCategory(category);
+    clickSound();
   };
 
   const handleStartQuiz = () => {
@@ -41,6 +47,7 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
           selectedDifficulty.toLowerCase()
         )
       );
+      clickSound();
       setQuizStarted(true);
     } else {
       console.error("Please select both category and difficulty.");
