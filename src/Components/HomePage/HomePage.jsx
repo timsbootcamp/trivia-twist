@@ -10,8 +10,6 @@ import PurpleCubeComponent from "../HomePage/CubeComponents/PurpleCubeComponent"
 import LogoComponent from "../LogoComponent";
 import useSound from 'use-sound';
 import "./HomePage.css";
-import TriviaSelection from '../TriviaSelection/TriviaSelection';
-import QuizApp from '../QuizApp/QuizApp';
 import ClickSound from "../../Sounds/ButtonClickSound.wav";
 
 function HomePage() {
@@ -22,7 +20,6 @@ function HomePage() {
     setIsHomePageVisible(false);
   };
 
-  const [selectedUrl, setSelectedUrl] = useState(null);
 
   const handleSelectDifficulty = (url) => {
     setSelectedUrl(url);
