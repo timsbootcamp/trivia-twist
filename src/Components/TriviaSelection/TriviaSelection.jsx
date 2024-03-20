@@ -154,21 +154,21 @@ const [clickSound] = useSound(ClickSound);
                 </Container> */}
        
 
-                <div className="difficultyContainer">
+                <div className="cardsContainer">
                 <div className="easyCard">
-                <div className="column is-one-third">
+                <div className="cardContainer">
                 <EasyCard SelectedDifficulty={setSelectedDifficulty} />
                 </div>
                 </div>
   
               <div className="mediumCard">
-                <div className="column is-one-third">
+                <div className="cardContainer">
                 <MediumCard SelectedDifficulty={setSelectedDifficulty} />
                 </div>
                 </div>
 
                 <div className="hardCard">
-                <div className="column is-one-third">
+                <div className="cardContainer">
                 <HardCard SelectedDifficulty={setSelectedDifficulty} />
                </div>
                </div>
