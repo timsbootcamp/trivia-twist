@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import './index.css'; 
 
-
+// Define a functional component named MediumCard that takes a prop SelectedDifficulty
 const MediumCard = ({ SelectedDifficulty }) => {
+    // Define a function to handle the selection of difficulty
   const handleSelectDifficulty = () => {
+    // Call the SelectedDifficulty function passed as prop with the argument 'Medium'
     SelectedDifficulty('Medium'); 
   };
 
+  // Return a button element with a click event listener to trigger handleSelectDifficulty
   return (
     <button className='difficultybtn mt-5 mb-5 col-sm-12 col-md-4' onClick={handleSelectDifficulty}>
 <svg className='Medium'
@@ -16,6 +19,7 @@ const MediumCard = ({ SelectedDifficulty }) => {
     viewBox="0 0 120 136.5"
   
   >
+    {/* Definitions for gradients, clip paths, masks, and filters */}
     <defs>
       <clipPath id="d">
         <path d="M.75.77h112.492v103.59H.75Zm0 0" />

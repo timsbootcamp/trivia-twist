@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
-import './index.css'; 
+import React, { useState } from 'react'; // Importing React and useState hook from 'react' library
+import './index.css'; // Importing CSS styles from index.css file
 
+// Functional component ScienceNatureCard receiving onSelectCategory prop
 const ScienceNatureCard = ({ onSelectCategory }) => {
+  // Function to handle category selection
   const handleSelectCategory = () => {
-    onSelectCategory('Science & Nature'); 
+    onSelectCategory('Science & Nature'); // Calling onSelectCategory prop with 'Science & Nature' as argument
   };
 
+  //Return JSX for rendering ScienceNatureCard
   return (
     <button className='categoryBtn' onClick={handleSelectCategory}>
    <svg className='Science'
@@ -222,4 +225,5 @@ const ScienceNatureCard = ({ onSelectCategory }) => {
   );
 };
 
+//export component
 export default ScienceNatureCard;
