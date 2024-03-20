@@ -19,6 +19,8 @@ width: inherit;
 .cubes {
     transform: scale(1);
     z-index: 3;
+    
+
 }
 
 .logoIcon {
@@ -54,3 +56,8 @@ position: absolute;
     font-style: normal;
   }
   
+  @media only screen and (max-width: 768px) {
+    .cubes {
+        display:none;
+    }
+  }

@@ -16,6 +16,12 @@
 
 }
 
+.scoreContainer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .btn{
     z-index: 3;
     position: relative;
@@ -27,3 +33,19 @@
     border: black solid;
     border-radius: 20px;
 }
+
+.leaderboardIcons {
+   height: 50px;
+   z-index: 2;
+
+}
+
+.scores {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+
+}
+
+
