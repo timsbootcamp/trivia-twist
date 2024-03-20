@@ -50,7 +50,7 @@ function HomePage() {
 
             <div className="buttonContainer">
               <Button
-                className="yellowButton "
+                className="whiteButton "
                 color=""
                 onClick={handleStartClick}
               >

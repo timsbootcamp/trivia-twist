@@ -83,9 +83,10 @@ body {
   display: flex;
 }
 
-.yellowButton{
+.whiteButton{
   background-color: whitesmoke;
   box-shadow: black;
+  width: 100px;
 }
 
 
