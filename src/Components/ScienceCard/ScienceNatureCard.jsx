@@ -8,7 +8,7 @@ const ScienceNatureCard = ({ onSelectCategory }) => {
     onSelectCategory('Science & Nature'); // Calling onSelectCategory prop with 'Science & Nature' as argument
   };
 
-  / Return JSX for rendering ScienceNatureCard
+  //Return JSX for rendering ScienceNatureCard
   return (
     <button className='categoryBtn' onClick={handleSelectCategory}>
    <svg className='Science'
