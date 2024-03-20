@@ -22,7 +22,6 @@ const QuizApp = ({ triviaUrl }) => {
           throw new Error('Failed to fetch quiz data');
         }
         const responseData = await response.json();
-        console.log(responseData);
         const formattedData = formatQuizData(responseData.results);
         setQuizData(formattedData);
         setLoading(false);
