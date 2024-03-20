@@ -1,7 +1,11 @@
 .greycubeContainer {
-  position: absolute;
+  align-items: center;
+  justify-content: center;
+  /* display: flex;
+  width: 100px;
+  height: 100px; */
 }
 .greyCube {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
 }

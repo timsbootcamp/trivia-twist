@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './index.css'; 
+import '../../Styles/cardSelection.css'
 
 const ScienceNatureCard = ({ onSelectCategory }) => {
   const handleSelectCategory = () => {
@@ -8,10 +9,10 @@ const ScienceNatureCard = ({ onSelectCategory }) => {
 
   return (
     <button className='categoryBtn' onClick={handleSelectCategory}>
-   <svg className='Science'
+   <svg className='cardSelection'
     xmlns="http://www.w3.org/2000/svg"
-    width="399"
-    height="455"
+    // width="399"
+    // height="455"
     viewBox="0 0 288 341.25"
    
   >

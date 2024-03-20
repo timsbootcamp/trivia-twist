@@ -10,7 +10,7 @@ body {
 
 .HomePage {
   background-image: url('/assets/2d-main-page-elements.png'), linear-gradient(90deg, #8c52ff, #5ce1e6);
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat, repeat-y;
   background-position: center;
   background-size: contain;
   height: 100vh;
@@ -18,6 +18,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  
 }
 
 .topContainer{
@@ -45,6 +47,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
 }
 
 .startButton {
@@ -74,8 +77,11 @@ body {
 
 .cubeContainer{
   align-items: center;
-  /* justify-content:end; */
+  justify-content: center;
   display: flex;
+  /* position: absolute;
+  bottom: 10%;
+  left: 10%; */
 }
 
 

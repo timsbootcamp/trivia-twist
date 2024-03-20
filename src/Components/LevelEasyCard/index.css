@@ -2,8 +2,8 @@
     fill:darkgreen
 }
 
-. difficultybtn{
+.difficultybtn{
     background-color: transparent;
     border: none;
-    transform: scale(0.5);
+    /* transform: scale(0.5); */
  }

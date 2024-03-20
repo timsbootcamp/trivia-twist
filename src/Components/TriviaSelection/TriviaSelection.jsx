@@ -74,7 +74,7 @@ const [clickSound] = useSound(ClickSound);
             </div>
           </div> */}
 
-          <div className="columns">
+          {/* <div className="columns"> */}
             {/* <div className="column is-two-third">
               <img
                 className="sidebysideCubes"
@@ -83,9 +83,9 @@ const [clickSound] = useSound(ClickSound);
             </div> */}
 
 
-            <Container className="categoryBtns">
-              <div className="columns">
-                <div className="column is-one-third">
+            {/* <Container className="categoryBtns"> */}
+              <div className="cardsContainer">
+                <div className="cardContainer">
                   <AnimalCard
                     className="tile categorybtn"
                     onSelectCategory={handleSelectCategory}
@@ -96,7 +96,7 @@ const [clickSound] = useSound(ClickSound);
                   />
                 </div>
 
-                <div className="column is-one-third">
+                <div className="cardContainer">
                   <ScienceNatureCard
                     className="tile categorybtn"
                     onSelectCategory={handleSelectCategory}
@@ -107,7 +107,7 @@ const [clickSound] = useSound(ClickSound);
                   />
                 </div>
 
-                <div className="column is-one-third">            
+                <div className="cardContainer">            
                   <SportsCard
                     className="tile categorybtn"
                     onSelectCategory={handleSelectCategory}
@@ -116,7 +116,7 @@ const [clickSound] = useSound(ClickSound);
                 </div>
               </div>
         
-            </Container>
+            {/* </Container> */}
 
             {/* <div className="column is-one-third">
               <img
@@ -124,7 +124,7 @@ const [clickSound] = useSound(ClickSound);
                 src="\public\sidebysideCubes.png"
               ></img>
             </div> */}
-            </div>
+            {/* </div> */}
         </>
       )}
 

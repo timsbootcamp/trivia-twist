@@ -5,6 +5,6 @@
 .categoryBtn {
     background-color: transparent;
     border: none;
-    transform: scale(0.5);
+    /* transform: scale(0.5); */
     padding:0;
  }

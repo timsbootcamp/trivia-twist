@@ -69,12 +69,34 @@
 }
 
 .categoryBtns {
-    padding-top: 100px;
-
+    /* padding-top: 100px; */
+height: 100%;
     
 }
 
 .BgGraphics{
 z-index: 1;
 position: absolute;
+}
+
+.cardsContainer{
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+
+.cardContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width:768px) {
+    .cardContainer{
+        flex-direction: row;
+    }
+    .cardsContainer{
+        flex-direction: column;
+    }
 }
