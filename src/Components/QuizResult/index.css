@@ -23,6 +23,12 @@
   text-align: center;
   display: block;
   width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: orange; /* Change background color on hover */
 }
 
 .card-title {
