@@ -9,7 +9,6 @@ const QuizResult = ({ score }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Submitted Initials:" + initials + " " + score);
     WriteScoresToLocalStorage(initials, score);
     setSubmitted(true); 
   };
