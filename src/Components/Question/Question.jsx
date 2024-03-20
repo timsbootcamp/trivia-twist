@@ -22,55 +22,53 @@ const Question = ({ questionData, onAnswer, onNext }) => {
 
   return (
     <>
-      <img
+      {/* <img
         className="BgGraphics"
         src="./assets/2D-BG-Elements.png"
-      ></img>
+      ></img> */}
 
-      <div className="columns">
-        <div className="column logoIcon">
+    
+        <div className="logoIcon">
           <img src="/Logo.png"></img>
         </div>
-      </div>
+   
 
-      <div className="columns">
-        <div className="column is-one-third">
+       <div className="columns">
+        {/* <div className="column is-one-third">
           <img
             className="cubes"
             src="/assets/left side cubes.svg"
           ></img>
-        </div>
+        </div>  */}
 
 
-      <Container className="questionContainer">
-        <div className="columns">
-          <div className="column is-full">
-            <div
+      {/* <Container className="questionContainer"> */}
+        
+          <div className="questionChoices">
+            <div 
               style={{
-                display: "block",
+                // display: "block",
                 border: "1px solid black",
                 backgroundColor: "#D0FF96",
                 padding: "10px",
                 marginBottom: "20px",
+                width: "90%",
+                margin: "20vh auto 0",
               }}
             >
-              <div className="Question">
+              <h1 className="Q">
                 {decodeHTMLEntities(questionData.question)}
-              </div>
+              </h1>
             </div>
 
             <div className="Options">
               {questionData.options.map((option, index) => (
-                <div
+                <div className="Option"
                   key={index}
                   onClick={() => handleOptionSelect(option)}
                   style={{
-                    display: "block",
-                    border: "1px solid black",
-                    padding: "10px",
-                    marginBottom: "10px",
-                    backgroundColor: "#FFF",
-                    cursor: "pointer",
+                    
+
                   }}
                 >
                   {decodeHTMLEntities(option)}
@@ -78,16 +76,16 @@ const Question = ({ questionData, onAnswer, onNext }) => {
               ))}
             </div>
           </div>
-        </div>
-      </Container>
 
-      <div className="column is-one-third">
+      {/* </Container> */}
+
+       {/* <div className="column is-one-third">
         <img
           className="cubes"
           src="/assets/right side cubes.svg"
         ></img>
-      </div>
-      </div>
+      </div> */}
+      </div> 
     </>
   );
 };

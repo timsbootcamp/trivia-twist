@@ -13,6 +13,7 @@ body {
   background-repeat: no-repeat, repeat-y;
   background-position: center;
   background-size: contain;
+  position: relative;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -21,6 +22,19 @@ body {
   overflow: hidden;
   
 }
+/* .Hompage::after{
+  background-image: url('/assets/2d-main-page-elements.png'), linear-gradient(90deg, #8c52ff, #5ce1e6);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  background-size: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+} */
 
 .topContainer{
   display: flex;
@@ -112,4 +126,11 @@ body {
   font-weight: bold;
   border: black solid;
   border-radius: 20px;
+}
+
+.flex-Center{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }

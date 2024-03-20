@@ -84,8 +84,8 @@ function HomePage() {
         </Columns> */}
         </>
       ) : (
-        <div>
-          {<div>
+        <div className="flex-Center">
+          {<div className="flex-Center">
             {clickSound()}
             <TriviaSelection onSelectDifficulty={handleSelectDifficulty} />
             {selectedUrl && <QuizApp triviaUrl={selectedUrl} />}

@@ -1,23 +1,22 @@
-.Question {
+.Q {
 z-index: 999999;
 position: relative;
-padding-top: 50px;
-padding-bottom: 50px;
+padding-top: 15px;
+padding-bottom:10px;
 
 }
 
 .Options {
 z-index: 999999;
-position: absolute;
+/* position: absolute; */
 width: inherit;
 }
 
 .questionContainer{
-    margin-top: 300px;
+    /* margin-top: 300px; */
 }
 
 .cubes {
-    transform: scale(1);
     z-index: 3;
 }
 
@@ -27,11 +26,12 @@ width: inherit;
     align-items: center; /* Add this line */
     z-index: 1;
     position: absolute;
-    top: 0;
+    top: 3%;
     left: 0;
     right: 0;
     height: 15%; /* You can adjust this height as needed */
     transform: scale(0.5);
+    
 }
 
 .btn {
@@ -54,3 +54,54 @@ position: absolute;
     font-style: normal;
   }
   
+.questionChoices{
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    
+   
+  }
+
+.Options{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 50px auto 0;
+    
+}
+
+.Option{
+    display: block;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #FFF;
+    cursor: pointer;
+    width: inherit;
+    max-width: 300px;
+    text-align: center;
+    
+
+    
+
+}
+
+
+  
+  .Q{
+font-size: 12px;
+
+
+  }
+
+/* @media (max-width:768px) {
+    .questionChoices{
+        flex-direction: row;
+    }
+    .Question{
+        flex-direction: column;
+    }
+}  */
