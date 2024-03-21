@@ -11,7 +11,7 @@ const SportsCard = ({ onSelectCategory }) => {
 
     // Return a button element with className 'categoryBtn' and onClick event handler set to handleSelectCategory
   return (
-    <button className='categoryBtn' onClick={handleSelectCategory}>
+    <button className='categoryBtn Sports' onClick={handleSelectCategory}>
 <svg className='cardSelection'
       xmlns="http://www.w3.org/2000/svg"
       version="1"

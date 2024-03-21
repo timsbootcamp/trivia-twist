@@ -11,7 +11,7 @@ const ScienceNatureCard = ({ onSelectCategory }) => {
 
   //Return JSX for rendering ScienceNatureCard
   return (
-    <button className='categoryBtn' onClick={handleSelectCategory}>
+    <button className='categoryBtn Science' onClick={handleSelectCategory}>
    <svg className='cardSelection'
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 288 341.25"

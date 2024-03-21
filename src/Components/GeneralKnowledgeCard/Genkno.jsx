@@ -12,7 +12,7 @@ const GenKnoCards = ({ onSelectCategory }) => {
 
   return (
     // Button component representing the "General Knowledge" category.
-    <button className='categoryBtn' onClick={handleSelectCategory}>
+    <button className='categoryBtn GenKno' onClick={handleSelectCategory}>
   <svg className='cardSelection'
       xmlns="http://www.w3.org/2000/svg"
       version="1"
