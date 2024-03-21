@@ -1,24 +1,53 @@
 .logo {
-    transform: scale(0.7);
-}
-
-.background-elements {
+    transform: scale(0.5);
+  }
+  
+  .background-elements {
     z-index: 1;
-    position:absolute;
-    transform: scale(1.1);
-}
-
-.initials-form {
-    z-index: 999999;
-    position:absolute;   
-}
-
-.btn {
-padding-top: 2%;
-margin-top: 170%;
-background-color:#D0FF96;
-font-size: 250%;
-font-weight: bold;
-border: black solid;
-border-radius: 20px;
-}
+    position: absolute;
+    /* transform: scale(1.1); */
+  }
+  
+  .quiz-result-card {
+    margin-top: -65px;
+    padding: 30px;
+    height: 200px;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ed80ff;
+  }
+  
+  .submit-button {
+    margin-top: 20px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+      background-color: orange; /* Change background color on hover */
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    color: rgb(62, 62, 62);
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: black;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .initials-form {
+    text-align: center; /* Center form elements */
+  }
+  

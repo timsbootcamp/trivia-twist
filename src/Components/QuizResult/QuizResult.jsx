@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { WriteScoresToLocalStorage } from "../../Lib/localStorage";
 import Leaderboard from "../Leaderboard/Leaderboard";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import "./index.css";
 
-// QuizResult component
 const QuizResult = ({ score }) => {
   const [initials, setInitials] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  // Function to handle submit
   const handleSubmit = (event) => {
     event.preventDefault();
     WriteScoresToLocalStorage(initials, score);
@@ -16,42 +16,49 @@ const QuizResult = ({ score }) => {
   };
 
   return (
-    <div>
-      {submitted ? (
-        <div>
-          <Leaderboard />
+    <div className="container">
+      <div className="row justify-content-center">
+        {/* Logo section */}
+        <div className="col-md-4">
+          <img className="logo" src="/Logo.png" alt="Logo" />
         </div>
-      ) : (
-        <div>
-          <div class="columns">
-            <div class="column is-one-third"></div>
-
-            {/* At end of Quiz, display message, score, and allow user to enter initials that get stored in local storage */}
-            <div class="column is-one-third">
-              <img className="logo" src="/Logo.png"></img>
-              <h2>Quiz Completed!</h2>
-              <p>Your score: {score}</p>
-
-              <form className="initials-form" onSubmit={handleSubmit}>
-                <label>
-                  Initials:
-                  <input
-                    type="text"
-                    value={initials}
-                    onChange={(e) => setInitials(e.target.value)}
-                  />
-                </label>
-                <button type="submit">Submit</button>
-              </form>
-            </div>
-
-            <div class="column is-one-third"></div>
-          </div>
+        <div className="col-md-4">
+          {submitted ? (
+            <Leaderboard />
+          ) : (
+            <Card className="quiz-result-card">
+              <Card.Body>
+                <Card.Title>Quiz Completed!</Card.Title>
+                <Card.Text>Your score: {score}</Card.Text>
+                <div className="d-flex justify-content-center"> {/* Centering the form */}
+                <form className="initials-form" onSubmit={handleSubmit}>
+                  <label>
+                    Initials:
+                    <input
+                      type="text"
+                      value={initials}
+                      onChange={(e) => setInitials(e.target.value)}
+                    />
+                  </label>
+                </form>
+                </div>
+              </Card.Body>
+            </Card>
+          )}
+        </div>
+        <div className="col-md-4">
+          {/* right side cubes here */}
+        </div>
+      </div>
+      {!submitted && (
+        <div className="row justify-content-center">
+          <Button variant="primary" className="submit-button" onClick={handleSubmit}>
+            Submit
+          </Button>
         </div>
       )}
     </div>
   );
 };
 
-// Export QuizResult component
 export default QuizResult;
