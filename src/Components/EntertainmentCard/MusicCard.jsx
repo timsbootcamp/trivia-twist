@@ -1,13 +1,20 @@
+// This component represents a card for the Music category
+// It accepts a prop called onSelectCategory which is a function used to handle category selection
+// When the button is clicked, it calls the handleSelectCategory function with the category 'Entertainment: Music'
+
 import React, { useState } from 'react';
 import './index.css'; 
 import '../../Styles/cardSelection.css'
 
+// Functional component for displaying a music category card
 const MusicCard = ({ onSelectCategory }) => {
+  // Function to handle selecting the music category
   const handleSelectCategory = () => {
     onSelectCategory('Entertainment: Music'); 
   };
 
   return (
+     // Button to trigger the category selection
     <button className='categoryBtn'  onClick={handleSelectCategory}>
 <svg className='cardSelection'
       xmlns="http://www.w3.org/2000/svg"

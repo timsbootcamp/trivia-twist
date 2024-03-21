@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import './index.css'; 
 import '../../Styles/cardSelection.css'
 
+// Functional component 'AnimalCard' accepting props 'onSelectCategory'
 const AnimalCard = ({ onSelectCategory }) => {
+  // Function to handle when a category is selected
   const handleSelectCategory = () => {
-    onSelectCategory('Animals'); 
+    onSelectCategory('Animals'); // Calls the 'onSelectCategory' function passed as prop with argument 'Animals'
   };
 
+  // Returns a button element representing the Animal Card
   return (
     <button className='categoryBtn' onClick={handleSelectCategory}>
    <svg className='cardSelection'
@@ -16,6 +19,8 @@ const AnimalCard = ({ onSelectCategory }) => {
       version="1"
       viewBox="0 0 299.25 341.25"
     >
+      {/* Defining SVG filters, masks, and clip paths */}
+        {/* Filling with a linear gradient */}
       <defs>
         <filter id="3c077a4edd" width="100%" height="100%" x="0%" y="0%">
           <feColorMatrix

@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 import './index.css'; 
 import '../../Styles/cardSelection.css'
 
+// Functional component GenKnoCards which renders a button representing the "General Knowledge" category.
+// Accepts a prop onSelectCategory function to handle the selection of the category.
 const GenKnoCards = ({ onSelectCategory }) => {
+  // Function to handle the selection of the "General Knowledge" category.
   const handleSelectCategory = () => {
     onSelectCategory('General Knowledge'); 
   };
 
   return (
+    // Button component representing the "General Knowledge" category.
     <button className='categoryBtn' onClick={handleSelectCategory}>
   <svg className='cardSelection'
       xmlns="http://www.w3.org/2000/svg"

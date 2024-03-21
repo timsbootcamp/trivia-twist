@@ -1,12 +1,15 @@
+// Importing necessary modules and styles
 import React, { useState } from 'react';
 import './index.css'; 
 
-
+// Functional component HardCard
 const HardCard = ({ SelectedDifficulty }) => {
+  // Function to handle difficulty selection
   const handleSelectDifficulty = () => {
     SelectedDifficulty('Hard'); 
   };
 
+  // JSX to render the button for selecting 'Hard' difficulty
   return (
     <button className='difficultybtn mt-5 mb-5 col-sm-12 col-md-4' onClick={handleSelectDifficulty}>
  <svg className='difficultySelection'

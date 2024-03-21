@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import './index.css'; 
 import '../../Styles/cardSelection.css'
 
+// Define a functional component SportsCard which takes onSelectCategory as props
 const SportsCard = ({ onSelectCategory }) => {
+  // Define a function handleSelectCategory which calls onSelectCategory with argument 'Sports' when invoked
   const handleSelectCategory = () => {
     onSelectCategory('Sports'); 
   };
 
+    // Return a button element with className 'categoryBtn' and onClick event handler set to handleSelectCategory
   return (
     <button className='categoryBtn' onClick={handleSelectCategory}>
 <svg className='cardSelection'
@@ -256,4 +259,5 @@ const SportsCard = ({ onSelectCategory }) => {
   );
 };
 
+// Export the SportsCard component
 export default SportsCard;

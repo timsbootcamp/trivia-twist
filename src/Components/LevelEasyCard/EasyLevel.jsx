@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import './index.css'; 
 
-
+// Define a functional component called EasyCard which takes a prop SelectedDifficulty
 const EasyCard = ({ SelectedDifficulty }) => {
+    // Define a function to handle selecting difficulty
   const handleSelectDifficulty = () => {
-    SelectedDifficulty('Easy'); 
+    SelectedDifficulty('Easy'); // Invoke SelectedDifficulty function with 'Easy' as argument
   };
 
+  // Return JSX representing a button element with SVG content
   return (
     <button className='difficultybtn mt-5 mb-5 col-sm-12 col-md-4' onClick={handleSelectDifficulty}>
 <svg className='difficultySelection'

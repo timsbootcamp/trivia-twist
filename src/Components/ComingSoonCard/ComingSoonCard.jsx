@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import './index.css'; 
 import '../../Styles/cardSelection.css'
 
+// Define a functional component 'ComingSoonCard' that takes a prop 'onSelectCategory'
 const ComingSoonCard = ({ onSelectCategory }) => {
+  // Define a function 'handleSelectCategory' to handle category selection
   const handleSelectCategory = () => {
-    onSelectCategory(''); 
+    onSelectCategory(''); // Call the 'onSelectCategory' function with an empty string as argument
   };
 
+    // Return a button component with a click event handler 'handleSelectCategory'
     return (
       <button className='categoryBtn' onClick={handleSelectCategory}>
       <svg className='cardSelection'

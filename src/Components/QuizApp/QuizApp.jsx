@@ -5,6 +5,7 @@ import useSound from 'use-sound';
 import correctSfx from '../../Sounds/CorrectAnswerSound.wav';
 import wrongSfx from '../../Sounds/WrongAnswerSound.wav';
 
+// QuizApp Component
 const QuizApp = ({ triviaUrl }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
@@ -12,7 +13,7 @@ const QuizApp = ({ triviaUrl }) => {
   const [quizData, setQuizData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-
+// useEffect hook to fetch quiz data from triviaUrl
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -32,7 +33,7 @@ const QuizApp = ({ triviaUrl }) => {
 
 
     fetchData();
-  }, [triviaUrl]);
+  }, [triviaUrl]); // Run effect when triviaUrl variable changes
 
 
   const formatQuizData = (data) => {
@@ -44,9 +45,11 @@ const QuizApp = ({ triviaUrl }) => {
     }));
   };
 
- 
+ // Play sound when answer is correct or incorrect
   const [playCorrect] = useSound(correctSfx);
   const [playWrong] = useSound(wrongSfx);
+
+  // Check whether answer is correct and if so increment score
   const handleAnswer = (selectedAnswer) => {
     const isCorrect = selectedAnswer === quizData[currentQuestion].correctAnswer;
     setUserAnswers([...userAnswers, { questionId: currentQuestion, selectedAnswer, isCorrect }]);
@@ -58,16 +61,17 @@ const QuizApp = ({ triviaUrl }) => {
     )
   };
 
-
+// Move to next question
   const nextQuestion = () => {
     setCurrentQuestion(currentQuestion + 1);
   };
 
-
+// On screen message whilst data is being loaded
   if (loading) {
     return <div>Loading...</div>;
   }
 
+  // Display QuestionComponent with next question otherwise display QuizResult component with score
   if (currentQuestion < quizData.length) {
     return (
       <Question
@@ -83,5 +87,5 @@ const QuizApp = ({ triviaUrl }) => {
     );
   }
 };
-
+// Export QuizApp component
 export default QuizApp;
