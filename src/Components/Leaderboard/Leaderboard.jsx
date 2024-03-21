@@ -31,7 +31,7 @@ const Leaderboard = () => {
 
         <div class=" column is-one-third">
           <div className="logoContainer">
-          <img className="logoleaderboard" src="/Logo.png"></img>
+          {/* <img className="TriviaTwist" src="/Logo.png"></img> */}
  </div>
          <div className="scoreContainer">
           <h2 className="">Leaderboard</h2>
