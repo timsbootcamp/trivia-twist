@@ -1,8 +1,10 @@
+/* Side by Side Cubes  */
 .sidebysideCubes {
   transform: scale(1);
   z-index: 3;
 }
 
+/* Difficulty Level Cards Container */
 .difficultyContainer {
   display: flex;
   flex-direction: row;
@@ -10,6 +12,7 @@
   margin-top: 110px;
 }
 
+/* Difficulty Level cards - BEGIN */
 .easyCard {
   flex-direction: row;
 }
@@ -21,7 +24,10 @@
 .hardCard {
   flex-direction: row;
 }
+/* Difficulty Level cards - END */
 
+
+/* Category Button - BEGIN */
 .categoryBtn {
   z-index: 3;
   position: relative;
@@ -35,12 +41,17 @@
 .categoryBtns {
   height: 100%;
 }
+/* Category Button - END */
 
+
+/* Background Graphics */
 .BgGraphics {
   z-index: 1;
   position: absolute;
 }
 
+
+/* Card Container - BEGIN */
 .cardsContainer {
   display: flex;
   align-items: center;
@@ -53,7 +64,11 @@
   flex-direction: column;
   justify-content: center;
 }
+/* Card Container - END */
 
+
+
+/* Media Query */
 @media (max-width: 768px) {
   .cardContainer {
     flex-direction: row;

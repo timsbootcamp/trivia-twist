@@ -5,10 +5,13 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import "./index.css";
 
+// Functional component for displaying quiz result
 const QuizResult = ({ score }) => {
+  // State hooks for handling initials and submission status
   const [initials, setInitials] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
+  // Function to handle submission
   const handleSubmit = (event) => {
     event.preventDefault();
     WriteScoresToLocalStorage(initials, score);

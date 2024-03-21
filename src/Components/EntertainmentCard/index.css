@@ -1,7 +1,10 @@
+/* Hover effect for Entertainment - Music card */
 .Music:hover{
     fill:whitesmoke
  }
 
+
+ /* Entertainment - Music card - make background and border transparent */
  .categoryBtn {
     background-color: transparent;
     border: none;

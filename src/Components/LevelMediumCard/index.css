@@ -1,7 +1,9 @@
+/* Hover effect for Medium Difficulty Level card */
 .Medium:hover{
     fill:blue
 }
 
+/*  Medium Difficulty Level Card - make background and border transparent */
 .difficultybtn {
     background-color: transparent;
     border: none;

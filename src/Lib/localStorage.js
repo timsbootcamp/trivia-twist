@@ -1,3 +1,4 @@
+// Save to Local Storage
 export const WriteScoresToLocalStorage = (userName, scoreQuiz) => {
     const localStorageQuiz_Key = "TriviaTwist-Scoring";
 
@@ -14,7 +15,7 @@ export const WriteScoresToLocalStorage = (userName, scoreQuiz) => {
 };
 
 
-// Load from local storage based on key:
+// Load from Local Storage based on key:
 export function readScoresFromLocalStorage() {
     const localStorageQuiz_Key = "TriviaTwist-Scoring";
 
