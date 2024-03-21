@@ -1,5 +1,4 @@
 .leaderboard {
-    /* background-color: #8c52ff; */
     background-image: url('/assets/2D-BG-Elements.png'), linear-gradient(90deg, #8c52ff, #5ce1e6);
     background-repeat: no-repeat, no-repeat;
     background-position: center;
@@ -40,12 +39,25 @@
 
 }
 
+
 .scores {
     display:flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 10px;
 
+}
+
+@media (max-width:768px) {
+    .logoleaderboard{
+        width: 50%;
+
+    }
+    .logoContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 

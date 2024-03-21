@@ -31,16 +31,12 @@ function HomePage() {
     <div className="HomePage">
       {isHomePageVisible ? (
         <>
-          {/* <img
-            className="BgGraphics"
-            src="\assets\2d-main-page-elements.png"
-          ></img> */}
+
 
           <div className="topContainer">
-            {/* <div className="column is-full logoMain"> */}
               <img src="/assets/main-page-logo.png" className="logo"></img>
             </div>
-          {/* </div> */}
+
           
 
           <div className="contentContainer">
@@ -50,7 +46,7 @@ function HomePage() {
 
             <div className="buttonContainer">
               <Button
-                className="yellowButton "
+                className="whiteButton "
                 color=""
                 onClick={handleStartClick}
               >
@@ -64,28 +60,10 @@ function HomePage() {
             </div>
           </div>
 
-          {/* <Columns>
-          <Columns.Column>
-            <GreyCubeComponent />
-            <PinkCubeComponent />
-            <TwoDimComponents />
-          </Columns.Column>
-          <Columns.Column>
-            <Container className="has-text-centered">
-              <LogoComponent />
-              <Button color="primary" onClick={handleStartClick}>
-                Start
-              </Button>
-            </Container>
-          </Columns.Column>
-          <Columns.Column>
-          <TwoDimComponents />
-          </Columns.Column>
-        </Columns> */}
         </>
       ) : (
-        <div>
-          {<div>
+        <div className="flex-Center">
+          {<div className="flex-Center">
             {clickSound()}
             <TriviaSelection onSelectDifficulty={handleSelectDifficulty} />
             {selectedUrl && <QuizApp triviaUrl={selectedUrl} />}

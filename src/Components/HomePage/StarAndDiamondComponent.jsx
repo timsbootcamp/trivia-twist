@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import anime from "animejs/lib/anime.es.js";
 import StarAndDiamond from '../../assets/StarAndDiamond.svg';
-// import "./TwoDimComponents.css";
+
 
 export const StarAndDiamondComponent = () => {
   useEffect(() => {

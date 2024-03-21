@@ -23,17 +23,18 @@ const Leaderboard = () => {
   return (
     <div className="leaderboard">
       {playCheers()}
-      {/* <img className="background-elements" src="./assets/2D-BG-Elements.png"></img> */}
+
       <div class="columns">
         <div class="column is-one-third">
-          <img src="\assets\left side cubes.svg"></img>
+
         </div>
 
-        <div class="column is-one-third">
-          <img className="logo" src="/Logo.png"></img>
-
+        <div class=" column is-one-third">
+          <div className="logoContainer">
+          <img className="logoleaderboard" src="/Logo.png"></img>
+ </div>
          <div className="scoreContainer">
-          <h2 className="title ">Leaderboard</h2>
+          <h2 className="">Leaderboard</h2>
           <container className="scores">
             
           <ul>

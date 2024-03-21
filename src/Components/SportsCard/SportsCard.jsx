@@ -1,5 +1,6 @@
-import React, { useState } from 'react';// Import React and useState hook from 'react' library
-import './index.css'; // Import external CSS file
+import React, { useState } from 'react';
+import './index.css'; 
+import '../../Styles/cardSelection.css'
 
 // Define a functional component SportsCard which takes onSelectCategory as props
 const SportsCard = ({ onSelectCategory }) => {
@@ -11,10 +12,8 @@ const SportsCard = ({ onSelectCategory }) => {
     // Return a button element with className 'categoryBtn' and onClick event handler set to handleSelectCategory
   return (
     <button className='categoryBtn' onClick={handleSelectCategory}>
-<svg className='Sports'
+<svg className='cardSelection'
       xmlns="http://www.w3.org/2000/svg"
-      width="399"
-      height="455"
       version="1"
       viewBox="0 0 300 341.25"
     >
