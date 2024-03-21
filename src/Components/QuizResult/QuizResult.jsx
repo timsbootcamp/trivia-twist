@@ -19,7 +19,7 @@ const QuizResult = ({ score }) => {
     <div className="container">
       <div className="row justify-content-center">
         {/* Logo section */}
-        <div className="col-md-4">
+        <div className="col-md-4 brandContainer">
           <img className="logo" src="/Logo.png" alt="Logo" />
         </div>
         <div className="col-md-4">

@@ -51,3 +51,7 @@
     text-align: center; /* Center form elements */
   }
   
+  .brandContainer{
+    height: auto;
+    width: 300px;
+  }
