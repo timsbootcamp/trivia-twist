@@ -1,12 +1,3 @@
-body {
-  /* background-color: #8c52ff; */
-  /* background-image: url('/assets/2d-main-page-elements.png'), linear-gradient(90deg, #8c52ff, #5ce1e6);
-  background-repeat: no-repeat, no-repeat;
-  background-position: center;
-  background-size: contain;
-  height: 100vh;
-  overflow: hidden; */
-}
 
 .HomePage {
   background-image: url('/assets/2d-main-page-elements.png'), linear-gradient(90deg, #8c52ff, #5ce1e6);
@@ -22,19 +13,6 @@ body {
   overflow: hidden;
   
 }
-/* .Hompage::after{
-  background-image: url('/assets/2d-main-page-elements.png'), linear-gradient(90deg, #8c52ff, #5ce1e6);
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  background-size: center;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 999;
-
-} */
 
 .topContainer{
   display: flex;
@@ -43,7 +21,6 @@ body {
   justify-content: center;
   width: 100%;
 }
-
 
 .logo-container {
   align-items: center;
@@ -94,9 +71,6 @@ body {
   align-items: center;
   justify-content: center;
   display: flex;
-  /* position: absolute;
-  bottom: 10%;
-  left: 10%; */
 }
 
 
@@ -105,9 +79,6 @@ body {
   background-color: #f2f2f2;
 }
 
-/* .hide {
-  display: hide;
-} */
 
 .BgGraphics {
   z-index: 1;

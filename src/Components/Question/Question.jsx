@@ -17,7 +17,7 @@ import { Container } from "react-bulma-components"; // Importing Container compo
 const Question = ({ questionData, onAnswer, onNext }) => {
   const [selectedOption, setSelectedOption] = useState(""); // State to store the selected answer option
 
-   /**
+  /**
    * Handles the selection of an answer option.
    * @param {string} option - The selected answer option.
    */
@@ -37,75 +37,45 @@ const Question = ({ questionData, onAnswer, onNext }) => {
     onNext(); // Move to the next question
   };
 
-  // Render Question and Answer options		
+  // Render Question and Answer options
   return (
     <>
-      {/* <img
-        className="BgGraphics"
-        src="./assets/2D-BG-Elements.png"
-      ></img> */}
+      <div className="logoIcon">
+        <img src="/Logo.png"></img>
+      </div>
 
-    
-        <div className="logoIcon">
-          <img src="/Logo.png"></img>
-        </div>
-   
-
-       <div className="columns">
-        {/* <div className="column is-one-third">
-          <img
-            className="cubes"
-            src="/assets/left side cubes.svg"
-          ></img>
-        </div>  */}
-
-
-      {/* <Container className="questionContainer"> */}
-        
-          <div className="questionChoices">
-            <div 
-              style={{
-                // display: "block",
-                border: "1px solid black",
-                backgroundColor: "#D0FF96",
-                padding: "10px",
-                marginBottom: "20px",
-                width: "90%",
-                margin: "20vh auto 0",
-              }}
-            >
-              <h1 className="Q">
-                {decodeHTMLEntities(questionData.question)}
-              </h1>
-            </div>
-
-            <div className="Options">
-              {questionData.options.map((option, index) => (
-                <div className="Option"
-                  key={index}
-                  onClick={() => handleOptionSelect(option)}
-                  style={{
-                    
-
-                  }}
-                >
-                  {decodeHTMLEntities(option)}
-                </div>
-              ))}
-            </div>
+      <div className="columns">
+        <div className="questionChoices">
+          <div
+            style={{
+              border: "1px solid black",
+              backgroundColor: "#D0FF96",
+              padding: "10px",
+              marginBottom: "20px",
+              width: "90%",
+              margin: "20vh auto 0",
+            }}
+          >
+            <h1 className="Q">{decodeHTMLEntities(questionData.question)}</h1>
           </div>
 
-      {/* </Container> */}
-
-       {/* <div className="column is-one-third">
-        <img
-          className="cubes"
-          src="/assets/right side cubes.svg"
-        ></img>
-      </div> */}
-      </div> 
+          <div className="Options">
+            {questionData.options.map((option, index) => (
+              <div
+                className="Option"
+                key={index}
+                onClick={() => handleOptionSelect(option)}
+                style={{}}
+              >
+                {decodeHTMLEntities(option)}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </>
   );
 };
+
 // Export Question component
 export default Question;

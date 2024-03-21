@@ -14,8 +14,6 @@ const ScienceNatureCard = ({ onSelectCategory }) => {
     <button className='categoryBtn' onClick={handleSelectCategory}>
    <svg className='cardSelection'
     xmlns="http://www.w3.org/2000/svg"
-    // width="399"
-    // height="455"
     viewBox="0 0 288 341.25"
    
   >

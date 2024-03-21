@@ -1,102 +1,64 @@
-/* .HomePage {
-    background-image: url('/assets/2d-main-page-elements.png'), linear-gradient(90deg, #8c52ff, #5ce1e6);
-    background-repeat: no-repeat, no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  } */
-  
 .sidebysideCubes {
-    /* transform: scale(0.5);
-    z-index: 3;
-    padding-top: 100px;
-    position:relative;
-    width: auto;
-    height: auto; */
-    transform: scale(1);
-    z-index: 3;
+  transform: scale(1);
+  z-index: 3;
 }
 
-
-.difficultyContainer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 110px;
-  }
-
-.easyCard{
-    flex-direction: row;
-
+.difficultyContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 110px;
 }
 
-.mediumCard{
-    flex-direction: row;   
-
+.easyCard {
+  flex-direction: row;
 }
 
-.hardCard{
-    flex-direction: row;   
-
+.mediumCard {
+  flex-direction: row;
 }
 
-/* .logoIcon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: auto;
-    transform: scale(0.5);
-} */
+.hardCard {
+  flex-direction: row;
+}
 
 .categoryBtn {
-    z-index: 3;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 20%;
-    padding: 50px;
-
+  z-index: 3;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 20%;
+  padding: 50px;
 }
 
 .categoryBtns {
-    /* padding-top: 100px; */
-height: 100%;
-    
+  height: 100%;
 }
 
-.BgGraphics{
-z-index: 1;
-position: absolute;
+.BgGraphics {
+  z-index: 1;
+  position: absolute;
 }
 
-.cardsContainer{
-display: flex;
-align-items: center;
-justify-content: space-around;
+.cardsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.cardContainer{
-    display: flex;
-    align-items: center;
+.cardContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .cardContainer {
+    flex-direction: row;
+  }
+  .cardsContainer {
     flex-direction: column;
-    justify-content: center;
-}
-
-@media (max-width:768px) {
-    .cardContainer{
-        flex-direction: row;
-    }
-    .cardsContainer{
-        flex-direction: column;
-    }
+  }
 }

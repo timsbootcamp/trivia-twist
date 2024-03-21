@@ -6,8 +6,7 @@
  */
 
 function AnswerFeedback() {
- // Logic to determine whether the answer is correct or incorrect and display appropriate feedback
-    //if (answerCorrect)? ('Well Done, +1 point' {correct answer sound}) : ('Incorrect, better luck with the next question' {incorrect answer sound})  
+
 
     return (
         <>

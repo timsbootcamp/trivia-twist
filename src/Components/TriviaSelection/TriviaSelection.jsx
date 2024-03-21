@@ -12,16 +12,14 @@ import MediumCard from "../LevelMediumCard/MediumLevel";
 import "bulma/css/bulma.min.css";
 import "./index.css";
 import { Container } from "react-bulma-components";
-import ClickSound from "../../Sounds/ButtonClickSound.wav"
-
-
+import ClickSound from "../../Sounds/ButtonClickSound.wav";
 
 const generateTriviaUrl = (category, difficulty) => {
   return `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}&type=multiple`;
 };
 
 const TriviaSelection = ({ onSelectDifficulty }) => {
-const [clickSound] = useSound(ClickSound);
+  const [clickSound] = useSound(ClickSound);
   const triviaCategories = {
     Animals: 27,
     "Entertainment: Music": 12,
@@ -63,139 +61,66 @@ const [clickSound] = useSound(ClickSound);
     <div>
       {!selectedCategory && (
         <>
-          {/* <img
-            className="BgGraphics"
-            src="\assets\2D-BG-Elements.png"
-          ></img> */}
-
-          {/* <div className="columns">
-            <div className="column logoIcon">
-              <img src='/Logo.png'></img>
+          <div className="cardsContainer">
+            <div className="cardContainer">
+              <AnimalCard
+                className="tile categorybtn"
+                onSelectCategory={handleSelectCategory}
+              />
+              <GenKnowCards
+                className="tile categorybtn"
+                onSelectCategory={handleSelectCategory}
+              />
             </div>
-          </div> */}
 
-          {/* <div className="columns"> */}
-            {/* <div className="column is-two-third">
-              <img
-                className="sidebysideCubes"
-                src="/public/sidebysidecubes.png"
-              ></img>
-            </div> */}
+            <div className="cardContainer">
+              <ScienceNatureCard
+                className="tile categorybtn"
+                onSelectCategory={handleSelectCategory}
+              />
+              <MusicCard
+                className="tile categorybtn"
+                onSelectCategory={handleSelectCategory}
+              />
+            </div>
 
-
-            {/* <Container className="categoryBtns"> */}
-              <div className="cardsContainer">
-                <div className="cardContainer">
-                  <AnimalCard
-                    className="tile categorybtn"
-                    onSelectCategory={handleSelectCategory}
-                  />
-                  <GenKnowCards
-                    className="tile categorybtn"
-                    onSelectCategory={handleSelectCategory}
-                  />
-                </div>
-
-                <div className="cardContainer">
-                  <ScienceNatureCard
-                    className="tile categorybtn"
-                    onSelectCategory={handleSelectCategory}
-                  />
-                      <MusicCard
-                    className="tile categorybtn"
-                    onSelectCategory={handleSelectCategory}
-                  />
-                </div>
-
-                <div className="cardContainer">            
-                  <SportsCard
-                    className="tile categorybtn"
-                    onSelectCategory={handleSelectCategory}
-                  />
-                  <ComingSoonCard className="tile categorybtn"></ComingSoonCard>
-                </div>
-              </div>
-        
-            {/* </Container> */}
-
-            {/* <div className="column is-one-third">
-              <img
-                className="sidebysideCubes"
-                src="\public\sidebysideCubes.png"
-              ></img>
-            </div> */}
-            {/* </div> */}
+            <div className="cardContainer">
+              <SportsCard
+                className="tile categorybtn"
+                onSelectCategory={handleSelectCategory}
+              />
+              <ComingSoonCard className="tile categorybtn"></ComingSoonCard>
+            </div>
+          </div>
         </>
       )}
 
       {selectedCategory && !selectedDifficulty && (
         <div>
-          <h2>Select Trivia Difficulty:</h2>
-
-          {/* <Container className="categoryBtns">
-              <div className="columns">
-                <div className="column is-one-third">
+          <div className="cardsContainer">
+            <div className="easyCard">
+              <div className="cardContainer">
                 <EasyCard SelectedDifficulty={setSelectedDifficulty} />
-                </div>
-                </div>
-
-                <div className="columns">
-                <div className="column is-one-third">
-                <MediumCard SelectedDifficulty={setSelectedDifficulty} />
-                </div>
-                </div>
-
-                <div className="columns">
-                <div className="column is-one-third">
-                <HardCard SelectedDifficulty={setSelectedDifficulty} />
-               </div>
-               </div>
-
-                </Container> */}
-       
-
-                <div className="cardsContainer">
-                <div className="easyCard">
-                <div className="cardContainer">
-                <EasyCard SelectedDifficulty={setSelectedDifficulty} />
-                </div>
-                </div>
-  
-              <div className="mediumCard">
-                <div className="cardContainer">
-                <MediumCard SelectedDifficulty={setSelectedDifficulty} />
-                </div>
-                </div>
-
-                <div className="hardCard">
-                <div className="cardContainer">
-                <HardCard SelectedDifficulty={setSelectedDifficulty} />
-               </div>
-               </div>
-
               </div>
+            </div>
 
+            <div className="mediumCard">
+              <div className="cardContainer">
+                <MediumCard SelectedDifficulty={setSelectedDifficulty} />
+              </div>
+            </div>
 
-
-
-          {/* <select
-            value={selectedDifficulty}
-            onChange={(e) => setSelectedDifficulty(e.target.value)}
-          >
-            <option value="">Select Difficulty</option>
-            {["Easy", "Medium", "Hard"].map((difficulty) => (
-              <option key={difficulty} value={difficulty}>
-                {difficulty}
-              </option>
-            ))}
-          </select> */}
+            <div className="hardCard">
+              <div className="cardContainer">
+                <HardCard SelectedDifficulty={setSelectedDifficulty} />
+              </div>
+            </div>
+          </div>
         </div>
       )}
 
       {selectedCategory && selectedDifficulty && !quizStarted && (
-        <div>
-          { handleStartQuiz() }
-        </div>
+        <div>{handleStartQuiz()}</div>
       )}
     </div>
   );

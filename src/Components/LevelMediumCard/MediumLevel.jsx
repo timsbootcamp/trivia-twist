@@ -12,10 +12,8 @@ const MediumCard = ({ SelectedDifficulty }) => {
   // Return a button element with a click event listener to trigger handleSelectDifficulty
   return (
     <button className='difficultybtn mt-5 mb-5 col-sm-12 col-md-4' onClick={handleSelectDifficulty}>
-<svg className='difficultySelection'
+      <svg className='difficultySelection'
     xmlns="http://www.w3.org/2000/svg"
-    // width={399}
-    // height={455}
     viewBox="0 0 120 136.5"
   
   >
