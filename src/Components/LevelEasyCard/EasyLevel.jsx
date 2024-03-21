@@ -10,7 +10,7 @@ const EasyCard = ({ SelectedDifficulty }) => {
 
   // Return JSX representing a button element with SVG content
   return (
-    <button className='difficultybtn mt-5 mb-5 col-sm-12 col-md-4' onClick={handleSelectDifficulty}>
+    <button className='difficultybtn mt-5 mb-5 col-sm-12 col-md-4 Easy' onClick={handleSelectDifficulty}>
       <svg className='difficultySelection'
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 120 136.5"

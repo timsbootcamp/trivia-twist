@@ -15,7 +15,7 @@ const MusicCard = ({ onSelectCategory }) => {
 
   return (
      // Button to trigger the category selection
-    <button className='categoryBtn'  onClick={handleSelectCategory}>
+    <button className='categoryBtn Music'  onClick={handleSelectCategory}>
       <svg className='cardSelection'
       xmlns="http://www.w3.org/2000/svg"
       version="1"

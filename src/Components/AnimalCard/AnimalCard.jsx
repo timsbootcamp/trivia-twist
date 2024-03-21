@@ -11,7 +11,7 @@ const AnimalCard = ({ onSelectCategory }) => {
 
   // Returns a button element representing the Animal Card
   return (
-    <button className='categoryBtn' onClick={handleSelectCategory}>
+    <button className='categoryBtn AnimalCard' onClick={handleSelectCategory}>
    <svg className='cardSelection'
       xmlns="http://www.w3.org/2000/svg"
       version="1"

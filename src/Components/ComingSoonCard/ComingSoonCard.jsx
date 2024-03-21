@@ -11,7 +11,7 @@ const ComingSoonCard = ({ onSelectCategory }) => {
 
     // Return a button component with a click event handler 'handleSelectCategory'
     return (
-      <button className='categoryBtn' onClick={handleSelectCategory}>
+      <button className='categoryBtn ComingSoon' onClick={handleSelectCategory}>
       <svg className='cardSelection'
       xmlns="http://www.w3.org/2000/svg"
       version="1"
