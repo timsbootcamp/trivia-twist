@@ -1,6 +1,8 @@
-# trivia-twist - 'Twist your mind with Trivia-Twist!'
+# trivia-twist - 'Mind-Twisting Trivia!'
 
 We built a single page React application for a Trivia Quiz as our group final project for the edX Front-End Web Development course. The quiz offers users a fun and interactive experience, with thoughtfully selected questions from different categories and difficulty levels. The app also features animations and sound effects to make it more exciting. After finishing the quiz, users can enter their name to see how they rank on the leaderboard, making it competitive and engaging.
+
+![screenshot](./Documentation/triviatwist.gif)
 
 
 ## Our User Story
@@ -180,6 +182,32 @@ https://triviatwist.netlify.app
 
 >*Wireframe for Leaderboard Page*   
 ![screenshot](./Documentation/Wireframe05.png)
+
+
+
+## Screenshots of Trivia-Twist Application
+
+>*Home Page*    
+![screenshot](./Documentation/Homepage.png)
+
+>*Category Selection Page*    
+![screenshot](./Documentation/CategorySelect.png)
+
+>*Difficulty Selection Page*    
+![screenshot](./Documentation/DifficultySelect.png)
+
+
+>*Question and Answer Page*    
+![screenshot](./Documentation/QuestionAnswer.png)
+
+>*Quiz Result Page*    
+![screenshot](./Documentation/QuizResult.png)
+
+>*Leaderboard Page*    
+![screenshot](./Documentation/Leaderboard.png)
+
+
+
 
 
 ## Documentation of Folders of our Project
