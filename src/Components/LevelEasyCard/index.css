@@ -1,7 +1,10 @@
+/* Hover effect for Difficulty card */
 .Easy:hover{
     fill:darkgreen
 }
 
+
+/* Difficulty Card - make background and border transparent */
 .difficultybtn{
     background-color: transparent;
     border: none;

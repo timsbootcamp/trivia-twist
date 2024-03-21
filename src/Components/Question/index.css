@@ -1,19 +1,25 @@
+/* Styling for the Question */
 .Q {
   z-index: 999999;
   position: relative;
   padding-top: 15px;
   padding-bottom: 10px;
+  font-size: 12px;
 }
 
+
+/* Styling for the Question Options */
 .Options {
   z-index: 999999;
   width: inherit;
 }
 
+/* Styling for the cubes */
 .cubes {
   z-index: 3;
 }
 
+/* Styling for the logo */
 .logoIcon {
   display: flex;
   justify-content: center;
@@ -27,6 +33,7 @@
   transform: scale(0.5);
 }
 
+/* Styling for the button */
 .btn {
   z-index: 3;
   position: relative;
@@ -36,17 +43,22 @@
   height: 20%;
 }
 
+
+/* Styling for the background graphics */
 .BgGraphics {
   z-index: 1;
   position: absolute;
 }
 
+/* Styling for the Font */
 .archivo-black-regular {
   font-family: "Archivo Black", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+
+/* Styling for the Question Choices */
 .questionChoices {
   align-items: center;
   justify-content: space-around;
@@ -55,6 +67,7 @@
   margin-top: 40px;
 }
 
+/* Styling for the Multiple choice Options */
 .Options {
   align-items: center;
   display: flex;
@@ -62,6 +75,7 @@
   width: 100%;
   margin: 50px auto 0;
 }
+
 
 .Option {
   display: block;
@@ -75,6 +89,3 @@
   text-align: center;
 }
 
-.Q {
-  font-size: 12px;
-}

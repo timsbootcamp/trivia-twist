@@ -1,7 +1,9 @@
+/* Hover effect for General Knowledge card */
 .GenKno:hover{
     fill:whitesmoke
  }
- 
+
+ /* General Knowledge Card - make background and border transparent */
  .categoryBtn {
     background-color: transparent;
     border: none;

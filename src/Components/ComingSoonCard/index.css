@@ -1,7 +1,10 @@
+/* Hover effect for Coming Soon card */
 .ComingSoon:hover{
     fill:whitesmoke
  }
  
+
+ /* Coming Soon Card - make background and border transparent */
  .categoryBtn {
     background-color: transparent;
     border: none;

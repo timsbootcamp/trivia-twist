@@ -1,7 +1,9 @@
+/* Hover effect for Animal card */
 .AnimalCard:hover{
     fill:whitesmoke
  }
 
+ /* Animal Card - make background and border transparent */
 .categoryBtn {
     background-color: transparent;
     border: none;

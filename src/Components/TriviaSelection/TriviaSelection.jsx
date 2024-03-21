@@ -14,10 +14,13 @@ import "./index.css";
 import { Container } from "react-bulma-components";
 import ClickSound from "../../Sounds/ButtonClickSound.wav";
 
+// Function to generate trivia URL based on category and difficulty
 const generateTriviaUrl = (category, difficulty) => {
   return `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}&type=multiple`;
 };
 
+
+// Component for trivia selection
 const TriviaSelection = ({ onSelectDifficulty }) => {
   const [clickSound] = useSound(ClickSound);
   const triviaCategories = {
@@ -28,15 +31,19 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
     Sports: 21,
   };
 
+   // State variables
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedDifficulty, setSelectedDifficulty] = useState("");
   const [quizStarted, setQuizStarted] = useState(false);
 
+  // Handler for selecting category
   const handleSelectCategory = (category) => {
     setSelectedCategory(category);
     clickSound();
   };
 
+  
+  // Handler for starting quiz
   const handleStartQuiz = () => {
     if (selectedCategory && selectedDifficulty) {
       onSelectDifficulty(
@@ -52,6 +59,7 @@ const TriviaSelection = ({ onSelectDifficulty }) => {
     }
   };
 
+  // Title text based on selected category and difficulty
   const titleText =
     selectedCategory && selectedDifficulty
       ? `${selectedCategory} (${selectedDifficulty}) Quiz`

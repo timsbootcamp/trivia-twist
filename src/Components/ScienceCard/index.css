@@ -1,7 +1,9 @@
+/* Hover effect for Science card */
 .Science:hover{
     fill:whitesmoke
  }
 
+ /* Science Card - make background and border transparent */
  .categoryBtn {
     background-color: transparent;
     border: none;

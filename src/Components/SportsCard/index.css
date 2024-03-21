@@ -1,7 +1,10 @@
+/* Hover effect for Sports card */
 .Sports:hover{
     fill:whitesmoke
  }
  
+
+ /* Sports Card - make background and border transparent */
  .categoryBtn {
     background-color: transparent;
     border: none;
