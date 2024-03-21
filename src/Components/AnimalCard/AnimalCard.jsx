@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './index.css'; // Importing CSS file for styling
+import './index.css'; 
+import '../../Styles/cardSelection.css'
 
 // Functional component 'AnimalCard' accepting props 'onSelectCategory'
 const AnimalCard = ({ onSelectCategory }) => {
@@ -11,11 +12,8 @@ const AnimalCard = ({ onSelectCategory }) => {
   // Returns a button element representing the Animal Card
   return (
     <button className='categoryBtn' onClick={handleSelectCategory}>
-       {/* SVG representing an animal */}
-   <svg className='AnimalCard'
+   <svg className='cardSelection'
       xmlns="http://www.w3.org/2000/svg"
-      width="399"
-      height="455"
       version="1"
       viewBox="0 0 299.25 341.25"
     >

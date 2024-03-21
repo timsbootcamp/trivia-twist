@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { WriteScoresToLocalStorage } from "../../Lib/localStorage";
 import Leaderboard from "../Leaderboard/Leaderboard";
-// import Button from 'react-bootstrap/Button';
-// import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import "./index.css";
 
 const QuizResult = ({ score }) => {

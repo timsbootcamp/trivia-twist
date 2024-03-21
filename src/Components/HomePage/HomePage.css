@@ -1,23 +1,17 @@
-body {
-  /* background-color: #8c52ff; */
-  /* background-image: url('/assets/2d-main-page-elements.png'), linear-gradient(90deg, #8c52ff, #5ce1e6);
-  background-repeat: no-repeat, no-repeat;
-  background-position: center;
-  background-size: contain;
-  height: 100vh;
-  overflow: hidden; */
-}
 
 .HomePage {
   background-image: url('/assets/2d-main-page-elements.png'), linear-gradient(90deg, #8c52ff, #5ce1e6);
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat, repeat-y;
   background-position: center;
   background-size: contain;
+  position: relative;
   height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  
 }
 
 .topContainer{
@@ -27,7 +21,6 @@ body {
   justify-content: center;
   width: 100%;
 }
-
 
 .logo-container {
   align-items: center;
@@ -45,6 +38,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
 }
 
 .startButton {
@@ -66,15 +60,16 @@ body {
   display: flex;
 }
 
-.yellowButton{
+.whiteButton{
   background-color: whitesmoke;
   box-shadow: black;
+  width: 100px;
 }
 
 
 .cubeContainer{
   align-items: center;
-  /* justify-content:end; */
+  justify-content: center;
   display: flex;
 }
 
@@ -84,9 +79,6 @@ body {
   background-color: #f2f2f2;
 }
 
-/* .hide {
-  display: hide;
-} */
 
 .BgGraphics {
   z-index: 1;
@@ -106,4 +98,11 @@ body {
   font-weight: bold;
   border: black solid;
   border-radius: 20px;
+}
+
+.flex-Center{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }

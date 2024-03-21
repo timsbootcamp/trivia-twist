@@ -1,5 +1,6 @@
-import React, { useState } from 'react'; // Import React and useState hook from 'react' library
-import './index.css'; // Import styles from './index.css'
+import React, { useState } from 'react';
+import './index.css'; 
+import '../../Styles/cardSelection.css'
 
 // Define a functional component 'ComingSoonCard' that takes a prop 'onSelectCategory'
 const ComingSoonCard = ({ onSelectCategory }) => {
@@ -11,10 +12,8 @@ const ComingSoonCard = ({ onSelectCategory }) => {
     // Return a button component with a click event handler 'handleSelectCategory'
     return (
       <button className='categoryBtn' onClick={handleSelectCategory}>
-      <svg className='ComingSoon'
+      <svg className='cardSelection'
       xmlns="http://www.w3.org/2000/svg"
-      width="399"
-      height="455"
       version="1"
       viewBox="0 0 299.25 341.25"
     >

@@ -4,6 +4,7 @@
 
 import React, { useState } from 'react';
 import './index.css'; 
+import '../../Styles/cardSelection.css'
 
 // Functional component for displaying a music category card
 const MusicCard = ({ onSelectCategory }) => {
@@ -15,10 +16,8 @@ const MusicCard = ({ onSelectCategory }) => {
   return (
      // Button to trigger the category selection
     <button className='categoryBtn'  onClick={handleSelectCategory}>
-<svg className='MusicCard'
+      <svg className='cardSelection'
       xmlns="http://www.w3.org/2000/svg"
-      width="399"
-      height="455"
       version="1"
       viewBox="0 0 286.5 341.25"
     >

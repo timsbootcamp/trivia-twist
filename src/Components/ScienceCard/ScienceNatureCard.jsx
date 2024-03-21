@@ -1,5 +1,6 @@
-import React, { useState } from 'react'; // Importing React and useState hook from 'react' library
-import './index.css'; // Importing CSS styles from index.css file
+import React, { useState } from 'react';
+import './index.css'; 
+import '../../Styles/cardSelection.css'
 
 // Functional component ScienceNatureCard receiving onSelectCategory prop
 const ScienceNatureCard = ({ onSelectCategory }) => {
@@ -11,10 +12,8 @@ const ScienceNatureCard = ({ onSelectCategory }) => {
   //Return JSX for rendering ScienceNatureCard
   return (
     <button className='categoryBtn' onClick={handleSelectCategory}>
-   <svg className='Science'
+   <svg className='cardSelection'
     xmlns="http://www.w3.org/2000/svg"
-    width="399"
-    height="455"
     viewBox="0 0 288 341.25"
    
   >
